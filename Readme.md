@@ -1,6 +1,6 @@
 ## 🙏 NAMASTE REACT  WEB SERIES BY AKSHAY SAINI SIR
 
-![img](./images/reactgif.gif)
+![img](./images/file-type-reactjs.svg)
 
 ---
 
