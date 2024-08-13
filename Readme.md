@@ -1,7 +1,5 @@
 ## 🙏 NAMASTE REACT  WEB SERIES BY AKSHAY SAINI SIR
 
-![img](./images/file-type-reactjs.svg)
-
 ---
 
 ### 📚 EPISODE-01 : 
