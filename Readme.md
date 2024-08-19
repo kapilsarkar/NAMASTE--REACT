@@ -5,7 +5,7 @@
 
 
 
-### 📚 EPISODE-01 📗 : 
+### 📚 EPISODE-01 (INCEPTION) 📗 : 
 
 - 🔖 INCEPTION(THEORY) 📁 ➡️  [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-01-INCEPTION)
 
@@ -15,7 +15,7 @@
 
 ---
 
-### 📚 EPISODE-02 📗 : 
+### 📚 EPISODE-02 (IGNITING OUR APP) 📗 : 
 
 - 🔖 IGNITING OUR APP(THEORY) 📁 ➡️  [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-02-IGNITING%20OUR%20APP)
 
