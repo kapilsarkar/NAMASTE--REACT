@@ -1,4 +1,4 @@
-## 🙏 NAMASTE REACT ![img](./images/react.svg)   WEB SERIES BY AKSHAY SAINI SIR
+## 🙏 NAMASTE REACT ![img](./images/react.svg)   WEB SERIES BY AKSHAY SAINI 🚀  SIR
 ![IMG](https://img.shields.io/badge/NAMASTE%20REACT%20---%23FF5733
 )
 ---
