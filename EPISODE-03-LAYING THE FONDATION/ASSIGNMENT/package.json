@@ -1,0 +1,20 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "assignment",
+  "scripts": {
+    "start": "parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "author": "kapil",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "browserslist": "^4.23.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
