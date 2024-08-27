@@ -1,6 +1,4 @@
-### Namaste React Web Series by Akshay Saini Sir.
-
-### Episode 03 - Laying the Foundation Coding Assignment.
+### Episode 03 - Laying the Foundation Coding Assignment ➡️ .
 
 ### Create a Nested header Element using React.createElement(h1,h2,h3 inside a div with class "title")
 
