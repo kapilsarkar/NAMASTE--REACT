@@ -1,3 +1,9 @@
+body{
+    background-color: rgba(0, 0, 0, 0.872);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .heading{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(186, 21, 21);
