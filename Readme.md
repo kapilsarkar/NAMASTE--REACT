@@ -37,7 +37,7 @@
 
 - 🔖 LAYING THE FOUNDATION(ASSIGNMENT PART-2) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-03-LAYING%20THE%20FONDATION/ASSIGNMENT-2)
 
-- 🔖 LAYING THE FOUNDATION(ASSIGNMENT PART-2) ❄️  ➡️[LIVE LINK](https://searchbarreactassignment.netlify.app/)
+- 🔖 LIVE LINK(ASSIGNMENT PART-2) ❄️  ➡️[LIVE LINK](https://searchbarreactassignment.netlify.app/)
 
 ---
 
