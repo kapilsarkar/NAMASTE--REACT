@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+}
+#imgLogo{
+    width: 20%;
+    padding-top: 2rem;
+}
+.searchBox{
+    padding-top: 2rem;
+}
+.search{
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1rem;
+}
+#btnSubmit{
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(230, 230, 21);
+    font-weight: 700;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.userIcon{
+    padding-top: 2rem;
+}
+#user{
+    width: 20%;
+    border-radius: 1rem;
+}
