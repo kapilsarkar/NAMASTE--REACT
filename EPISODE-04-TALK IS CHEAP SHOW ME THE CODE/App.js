@@ -640,22 +640,19 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-
-        {
-          resList.map(restaurant => <RestaurantCard resData={restaurant}/>)
-        }
-
-        {/* <RestaurantCard resData={resList[0]} /> */}
-        {/* <RestaurantCard resData={resList[1]} />
-        <RestaurantCard resData={resList[2]} />
-        <RestaurantCard resData={resList[3]} />
-        <RestaurantCard resData={resList[4]} />
-        <RestaurantCard resData={resList[5]} />
-        <RestaurantCard resData={resList[6]} /> */}
+        {resList.map((restaurant) => (
+          <RestaurantCard
+            key={restaurant.card.card.info.id}
+            resData={restaurant}
+          />
+        ))}
       </div>
     </div>
   );
 };
+{
+  /* <RestaurantCard resData={resList[0]} /> */
+} //Old Code
 const RestaurantCard = (props) => {
   const { resData } = props; //Destructuring
   const { cloudinaryImageId, name, cuisines, locality, costForTwo, avgRating } =
