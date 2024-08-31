@@ -38,8 +38,7 @@
     padding: 10px;
 }
 .res-card{
-    max-width: 200px;
-    min-height: 10px;
+    max-width: 260px;
     transition: 0.05s;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
