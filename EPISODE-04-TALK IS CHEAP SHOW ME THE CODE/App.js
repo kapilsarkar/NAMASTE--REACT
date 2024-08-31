@@ -25,25 +25,95 @@ const Header = () => {
 };
 
 const resObj = {
-  id: "745861",
-  imageId:
-    "MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Shake.png",
-  action: {
-    link: "https://www.swiggy.com/collections/83673?collection_id=83673&tags=layout_CCS_Shakes&type=rcv2",
-    text: "Shake",
-    type: "WEBLINK",
-  },
-  entityType: "BANNER",
-  accessibility: {
-    altText: "restaurants curated for shakes",
-    altTextCta: "open",
-  },
-  entityId: "swiggy://collectionV2?collection_id=83673&tags=layout_CCS_Shakes",
-  frequencyCapping: {},
-  externalMarketing: {},
-  description: "Shake",
-};
 
+    info: {
+      id: "812598",
+      name: "Cafe Amudham",
+      cloudinaryImageId: "e76fc212e4d3f5baf2119e1642463380",
+      locality: "Gandhinagar",
+      areaName: "Majestic",
+      costForTwo: "₹246 for two",
+      cuisines: ["South Indian", "Snacks"],
+      avgRating: 4.7,
+      veg: true,
+      parentId: "396620",
+      avgRatingString: "4.7",
+      totalRatingsString: "1K+",
+      sla: {
+        deliveryTime: 24,
+        lastMileTravel: 2.9,
+        serviceability: "SERVICEABLE",
+        slaString: "20-25 mins",
+        lastMileTravelString: "2.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-31 23:59:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+            description: "OnlyOnSwiggy",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "OnlyOnSwiggy",
+                  imageId:
+                    "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "30% OFF",
+        subHeader: "UPTO ₹75",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/city/bangalore/cafe-amudham-gandhinagar-majestic-rest812598",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+};
 
 const Body = () => {
   return (
@@ -51,35 +121,34 @@ const Body = () => {
       <div className="search">Search</div>
       <div className="res-container">
         <RestaurantCard
-          resName="Meghna Foods"
-          cuisine="Hyderabadi, Pizzas, Fast Food, Cafe"
-          rating="5 star"
-          time="40-50mins"
+          resData = {resObj}
         />
-        <RestaurantCard
+        {/* <RestaurantCard
           resName="KFC"
           cuisine="Burger,Fast Food"
           rating="4.8 star"
           time="20-30 mins"
-        />
+        /> */}
       </div>
     </div>
   );
 };
 const RestaurantCard = (props) => {
-  const { resName, cuisine, rating, time } = props; //Destructuring
+  const {resData } = props; //Destructuring
   console.log(props);
   return (
     <div className="res-card">
       <img
         alt="card"
         className="res-logo"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/26/93808d5a-96a3-4547-9115-b490b9950cc6_931944.jpg"
+        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId}
       />
-      <h3>{resName}</h3>
-      <p>{cuisine}</p>
-      <p>{rating}</p>
-      <p>{time}</p>
+      <h3>{resData.info.name}</h3>
+      <p>{resData.info.cuisines.join(", ")}</p>
+      <p>{resData.info.avgRating} stars</p>
+      <p>{resData.info.locality}</p>
+      <p>{resData.info.costForTwo}</p>
+      <p>{resData.info.sla.slaString}</p>
     </div>
   );
 };
