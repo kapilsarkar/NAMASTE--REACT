@@ -581,15 +581,11 @@ const Body = () => {
         <input className="searchBox" placeholder="Search..." type="text" />
       </div>
       <div className="res-container">
-        {/* <RestaurantCard resName="Meghna Foods" cuisines="Biryani" /> */}
-
-        <RestaurantCard resData={ResList[0]} />
-        <RestaurantCard resData={ResList[1]} />
-        <RestaurantCard resData={ResList[2]} />
-        <RestaurantCard resData={ResList[3]} />
-        <RestaurantCard resData={ResList[4]} />
-        <RestaurantCard resData={ResList[5]} />
-        <RestaurantCard resData={ResList[6]} />
+        {ResList.map((restaurant) => {
+          return (
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          );
+        })}
       </div>
     </div>
   );
@@ -597,19 +593,21 @@ const Body = () => {
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
+    resData?.info;
   return (
     <div className="res-card">
       <img
         className="res-logo"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          resData.info.cloudinaryImageId
+          cloudinaryImageId
         }
       />
-      <h3>{resData.info.name}</h3>
-      <p>{resData.info.cuisines.join(", ")}</p>
-      <p>{resData.info.avgRating} stars</p>
-      <p>{resData.info.costForTwo}</p>
+      <h3>{name}</h3>
+      <p>{cuisines.join(", ")}</p>
+      <p>{avgRating} stars</p>
+      <p>{costForTwo}</p>
       <p>{resData.info.sla.deliveryTime}mins</p>
     </div>
   );
