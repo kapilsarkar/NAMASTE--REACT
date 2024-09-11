@@ -1,10 +1,12 @@
-const Header = () => {
+import { LOGO_URL } from "../utils/constant";
+
+ const Header = () => {
     return (
       <div className="header">
         <div className="logo-container">
           <img
             className="logo"
-            src="https://cdn-icons-png.freepik.com/256/958/958170.png?semt=ais_hybrid"
+            src= {LOGO_URL}
           />
           <h3 className="food-heading">Food App</h3>
         </div>
@@ -19,5 +21,5 @@ const Header = () => {
       </div>
     );
   };
-
-  export default Header
+ 
+  export default Header;

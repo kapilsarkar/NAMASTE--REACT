@@ -35,11 +35,28 @@
 .nav-items > ul > li{
     padding: 10px;
 }
+.search-filter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .search{
     margin-top: 1.2rem;
     padding: 1rem;
-    margin-inline: auto;
+    /* margin-inline: auto; */
     width: 30%;
+}
+.filter-btn{
+    margin-top: 1.2rem;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgb(213, 29, 29);
+    color: #fff;
 }
 .searchBox{
     padding: 15px 20px;
