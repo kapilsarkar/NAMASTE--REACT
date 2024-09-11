@@ -1,8 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
 import ResList from "../utils/mockData";
+import { useState } from "react";
 
 const Body = () => {
-  let listOfRestaurants = [
+  const [listOfRestaurants,setListOfRestaurants] = useState([
     {
       info: {
         id: "578812",
@@ -18,7 +19,7 @@ const Body = () => {
     },
     {
       info: {
-        id: "578815",
+        id: "578813",
         name: "Dominos",
         cloudinaryImageId: "d8wm0jbhfitiajn13sg6",
         costForTwo: "₹250 for two",
@@ -29,7 +30,20 @@ const Body = () => {
         },
       },
     },
-  ];
+    {
+      info: {
+        id: "578814",
+        name: "KFC",
+        cloudinaryImageId: "d8wm0jbhfitiajn13sg6",
+        costForTwo: "₹250 for two",
+        cuisines: ["Sweets", "Snacks"],
+        avgRating: 4.1,
+        sla: {
+          deliveryTime: 34,
+        },
+      },
+    },
+  ]);
 
   return (
     <div className="body">
@@ -41,11 +55,11 @@ const Body = () => {
           <button
             className="filter-btn"
             onClick={() => {
-              //Filter Logic :
-              listOfRestaurants = listOfRestaurants.filter((res) => {
-                return (res.info.avgRating > 4,
-                console.log(listOfRestaurants))
-              });
+
+              const filteredResList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setListOfRestaurants(filteredResList)
             }}
           >
             Top Rated Restaurant
