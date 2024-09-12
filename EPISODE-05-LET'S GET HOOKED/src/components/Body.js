@@ -3,48 +3,7 @@ import ResList from "../utils/mockData";
 import { useState } from "react";
 
 const Body = () => {
-  const [listOfRestaurants,setListOfRestaurants] = useState([
-    {
-      info: {
-        id: "578812",
-        name: "Arun Sweets",
-        cloudinaryImageId: "d8wm0jbhfitiajn13sg6",
-        costForTwo: "₹250 for two",
-        cuisines: ["Sweets", "Snacks"],
-        avgRating: 4.7,
-        sla: {
-          deliveryTime: 34,
-        },
-      },
-    },
-    {
-      info: {
-        id: "578813",
-        name: "Dominos",
-        cloudinaryImageId: "d8wm0jbhfitiajn13sg6",
-        costForTwo: "₹250 for two",
-        cuisines: ["Sweets", "Snacks"],
-        avgRating: 3.8,
-        sla: {
-          deliveryTime: 34,
-        },
-      },
-    },
-    {
-      info: {
-        id: "578814",
-        name: "KFC",
-        cloudinaryImageId: "d8wm0jbhfitiajn13sg6",
-        costForTwo: "₹250 for two",
-        cuisines: ["Sweets", "Snacks"],
-        avgRating: 4.1,
-        sla: {
-          deliveryTime: 34,
-        },
-      },
-    },
-  ]);
-
+  const [listOfRestaurants, setListOfRestaurants] = useState(ResList);
   return (
     <div className="body">
       <div className="search-filter">
@@ -55,11 +14,10 @@ const Body = () => {
           <button
             className="filter-btn"
             onClick={() => {
-
               const filteredResList = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4
+                (res) => res.info.avgRating >= 4.3
               );
-              setListOfRestaurants(filteredResList)
+              setListOfRestaurants(filteredResList);
             }}
           >
             Top Rated Restaurant
