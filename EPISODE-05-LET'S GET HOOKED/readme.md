@@ -1,6 +1,8 @@
 ### EPISODE-05 LET'S GET HOOKED.
 
-### What is the difference between `Named export`, `Default export`, and * as export ?
+### ASSIGNMENT QUESTIONS WITH ANSWERS (THEORY) :
+
+### 1. What is the difference between `Named export`, `Default export`, and * as export ?
 
 - `ES6` provides us to import & export a module and use it in other files. 
 - `ES6` provides two ways to export a module from a file: named export and default export. 
@@ -75,7 +77,7 @@ export default MyComponent;
 import MyComponent, {MyComponent2} from "./MyComponent";
 ```
 
-###  What is the importance of `config.js` file ?
+###  2. What is the importance of `config.js` file ?
 
 - `config.js` files are essentially editable text files that contain information required for the successful operation of a program. The files are structured in a particular way, formatted to be user configurable. Most of the computer programs we use: whether office suites, web browsers, even video games are configured via menu interfaces. Configuration files are very simple in structure. For instance, if you were to write an application, and the only thing it ever needed to know was its user's preferred name, then its one and only config file could contain exactly one word: the name of the user. For example:
 
@@ -89,7 +91,7 @@ NAME='Kapil'
 SURNAME='Sarkar'
 ```
 
-### What are `React Hooks` ?
+### 3. What are `React Hooks` ?
 
 - In `React` version 16.8, `React` introduced a new pattern called `Hooks`. `React Hooks` are simple JavaScript functions that we can use to isolate the reusable part from a functional component. `Hooks` can be stateful and can manage side-effects. `Hooks` allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
 
@@ -113,7 +115,7 @@ SURNAME='Sarkar'
 
 - `useDebugValue:` Helps to display a label in React DevTools for custom hooks.
 
-### Why do we need `useState Hook` ?
+### 4. Why do we need `useState Hook` ?
 
 - `useState hook` is used to maintain the state in our React application. It keeps track of the state changes so basically useState has the ability to encapsulate local state in a functional component. The useState hook is a special function that takes the initial state as an argument and returns an array of two entries. UseState encapsulate only singular value from the state, for multiple state need to have useState calls.
 
