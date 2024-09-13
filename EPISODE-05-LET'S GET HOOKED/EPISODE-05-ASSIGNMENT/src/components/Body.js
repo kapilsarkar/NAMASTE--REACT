@@ -1,4 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
+import restaurantList from "../utils/mockData";
 
 const Body = () => {
   return (
@@ -12,7 +13,9 @@ const Body = () => {
         </div>
       </div>
       <div className="res-container">
-        <RestaurantCard />
+        {restaurantList.map((restaurant)=>{
+          return <RestaurantCard  resData = {restaurant}/>
+        })}
       </div>
     </div>
   );
