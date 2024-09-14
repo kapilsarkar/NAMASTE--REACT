@@ -4,8 +4,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
-        <h3 className="food-heading">Food App</h3>
+          <img className="logo" src={LOGO_URL} />
+          <p className="food-heading">Food App</p>
+       
       </div>
       <div className="nav-items">
         <ul>
