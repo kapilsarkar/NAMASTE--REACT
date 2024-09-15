@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.anchor-head{
+    text-decoration: none;
+}
 .header{
     width: 100%;
     display: flex;

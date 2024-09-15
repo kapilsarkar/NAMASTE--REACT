@@ -4,13 +4,16 @@ import { useState } from "react";
 
 const Body = () => {
   const [allRes, setAllRes] = useState(restaurantList);
+  const [text,setText] = useState("");
 
   return (
     <div className="body">
       <div className="search-filter">
         <div className="search">
           <input className="searchBox" placeholder="Search..." type="text" />
-          <button className="search-btn">Search</button>
+          <button className="search-btn" onClick={()=>{}} 
+          >
+            Search</button>
         </div>
         <div className="filter">
           <button

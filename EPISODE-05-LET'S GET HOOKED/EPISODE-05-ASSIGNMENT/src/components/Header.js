@@ -3,11 +3,13 @@ import { LOGO_URL } from "../utils/constant";
 const Header = () => {
   return (
     <div className="header">
+      <a href="/" className="anchor-head">
       <div className="logo-container">
-          <img className="logo" src={LOGO_URL} />
-          <p className="food-heading">Food App</p>
-       
+        <img className="logo" src={LOGO_URL} />
+        <p className="food-heading">Food App</p>
       </div>
+      </a>
+     
       <div className="nav-items">
         <ul>
           <li>Home</li>
