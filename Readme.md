@@ -113,6 +113,33 @@ Implementing React's core features, managing state, and working with UI data.
 
 ---
 
+### 📚 EPISODE-05 (LET'S GET HOOKED) 📗 :
+---
+
+Exploring React Hooks and understanding their importance.
+
+- 🧾 Topics Covered :
+
+   - File structure
+
+   - Import/export
+
+   - React Hooks (useState)
+
+- 📒  LET'S GET HOOKED(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-05-LET'S%20GET%20HOOKED)
+
+- 💻 LET'S GET HOOKED(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-05-LET'S%20GET%20HOOKED/EPISODE-05-ASSIGNMENT)
+
+- 📔 ASSIGNMENT :
+
+    - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️   [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B05%2B-%2BLet's%2Bget%2BHooked!.pdf)
+
+    - 🔖 LET'S GET HOOKED(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-05-LET'S%20GET%20HOOKED/EPISODE-05-ASSIGNMENT)
+
+
+    - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://episode05assignment.netlify.app/)
+
+---
 
 
 
