@@ -1,6 +1,12 @@
-## 🙏 NAMASTE ❤️ REACT  ![img](./images/react.svg)   WEB SERIES BY AKSHAY SAINI 🚀  SIR
+## 🙏 NAMASTE ❤️ REACT WEB SERIES BY AKSHAY SAINI 🚀  SIR
+
+![img](./images/react.svg) 
+
+Namaste React Course from Zero to Hero 🚀 by Akshay Saini(Founder of NamasteDev). This repository contains Codes, Assignments, Assignment Solution of this course.
+
+
 ![IMG](https://img.shields.io/badge/NAMASTE%20REACT%20---%23FF5733
-)
+)  
 ---
 
 

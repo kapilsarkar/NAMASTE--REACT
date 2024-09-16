@@ -4,16 +4,34 @@ import { useState } from "react";
 
 const Body = () => {
   const [allRes, setAllRes] = useState(restaurantList);
-  const [text,setText] = useState("");
+  const [searchText, setSearchText] = useState("");
+
+  function handleSearchClick() {
+    if (searchText === "") {
+      setAllRes(allRes);
+      return;
+    }
+    const filterBySearch = allRes.filter((res) => {
+      if (res.info.name.toLowerCase().includes(searchText.toLowerCase())) {
+        return res;
+      }
+    });
+    setAllRes(filterBySearch);
+  }
 
   return (
     <div className="body">
       <div className="search-filter">
         <div className="search">
-          <input className="searchBox" placeholder="Search..." type="text" />
-          <button className="search-btn" onClick={()=>{}} 
-          >
-            Search</button>
+          <input
+            className="searchBox"
+            placeholder="Search..."
+            onChange={(e) => setSearchText(e.target.value)}
+            type="text"
+          />
+          <button className="search-btn" onClick={handleSearchClick}>
+            Search
+          </button>
         </div>
         <div className="filter">
           <button

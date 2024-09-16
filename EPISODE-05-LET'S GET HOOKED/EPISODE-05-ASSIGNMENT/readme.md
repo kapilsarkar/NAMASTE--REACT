@@ -1,5 +1,7 @@
 ### NAMASTE REACT WEB SERIES EPISODE-04 (ASSIGNMENT) :
 
+---
+
 ### Coding Assignment :
 
 - Clean up your code.
@@ -17,3 +19,19 @@
 - Use useState to create a variable and bind it to the input box.
 
 - Try to make your search bar work.
+
+---
+
+### Output :
+
+![IMG](./Output-1.png)
+
+---
+
+### Output(Search-Box) :
+
+![IMG2](./Output-2.png)
+
+---
+
+[LIVE LINK]()
