@@ -1,12 +1,8 @@
-### NAMASTE REACT WEB SERIES EPISODE-06 (ASSIGNMENT) :
-
----
-
-### Coding Assignment :
+### EPISODE-06 EXPLORING THE WORLD.
 
 
 
----
+
 
 
 
