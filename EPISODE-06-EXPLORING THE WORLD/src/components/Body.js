@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [filteredRestaurant, setFilterRestaurant] = useState([]);
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchData();
   }, []);
@@ -17,17 +19,39 @@ const Body = () => {
     setListOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+    setFilterRestaurant(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-   
-  
-  return listOfRestaurants.length === 0 ? <Shimmer/> : (
+
+  return listOfRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="search-filter">
         <div className="search">
-          <input className="searchBox" placeholder="Search..." type="text" />
+          <input
+            className="searchBox"
+            placeholder="Search..."
+            type="text"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            className="searchBtn"
+            onClick={() => {
+              const filteredRestaurant = listOfRestaurants.filter((res) => {
+                return res.info.name
+                  .toLowerCase()
+                  .includes(searchText.toLowerCase());
+              });
+              setListOfRestaurants(filteredRestaurant);
+            }}
+          >
+            Search
+          </button>
         </div>
         <div className="filter">
           <button
@@ -36,7 +60,7 @@ const Body = () => {
               const filteredResList = listOfRestaurants.filter(
                 (res) => res.info.avgRating >= 4.3
               );
-              setListOfRestaurants(filteredResList);
+              setFilterRestaurant(filteredResList);
             }}
           >
             Top Rated Restaurant
