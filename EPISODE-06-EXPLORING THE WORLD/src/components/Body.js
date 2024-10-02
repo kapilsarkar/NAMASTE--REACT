@@ -1,9 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
-import ResList from "../utils/mockData";
+import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(ResList);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
@@ -21,8 +21,9 @@ const Body = () => {
       json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
   };
-
-  return (
+   
+  
+  return listOfRestaurants.length === 0 ? <Shimmer/> : (
     <div className="body">
       <div className="search-filter">
         <div className="search">
