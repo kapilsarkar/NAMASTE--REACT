@@ -1,28 +1,52 @@
 import { useState, useEffect } from "react";
-import { RESTAURANT_TO_EXPLORE } from "../utils/constant";
 import TopRestaurant from "./TopRestaurant";
+import TopDelhi from "./TopDelhi";
+import { DELHI_TO_EXPLORE, KOLKATA_TO_EXPLORE } from "../utils/constant";
 
 const Body = () => {
   const [topRestaurant, setTopRestaurant] = useState([]);
+  const [topDelhi, setTopDelhi] = useState([]);
+  const [searchText,setSearchText] = useState("")
   useEffect(() => {
-    FetchTopRestaurantToExplore();
+    fetchKolkata(), fetchDelhi();
   }, []);
 
-  const FetchTopRestaurantToExplore = async () => {
-    const data = await fetch(RESTAURANT_TO_EXPLORE);
+  const fetchKolkata = async () => {
+    const data = await fetch(KOLKATA_TO_EXPLORE);
     const json = await data.json();
     console.log(json);
     setTopRestaurant(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
+
+  const fetchDelhi = async () => {
+    const data = await fetch(DELHI_TO_EXPLORE);
+    const json = await data.json();
+    console.log(json);
+    setTopDelhi(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
   return (
     <div className="Body">
+      <div className="search">
+        <input type="text" className="search-box" placeholder="Search..." />
+        <button className="search-btn">Search</button>
+      </div>
+      <h2 className="heading-kolkata">Top Restaurants in Kolkata</h2>
       <div className="top-res">
-        <h3>Top Restaurants Of Kolkata</h3>
         {topRestaurant.map((restaurant) => {
-          return <TopRestaurant resData={restaurant} />;
+          return (
+            <TopRestaurant key={restaurant.info.id} resData={restaurant} />
+          );
+        })}
+      </div>
+      <h2 className="heading-delhi">Top Restaurants in Delhi</h2>
+      <div className="top-delhi">
+        {topDelhi.map((restaurant) => {
+          return <TopDelhi key={restaurant.info.id} resData={restaurant} />;
         })}
       </div>
     </div>

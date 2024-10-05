@@ -53,6 +53,15 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.heading-kolkata{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1.2rem;
+  font-weight: 900;
+  padding: 1.2rem;
+  text-align: center;
+  background-color: #e94f1f;
+    color: #fff;
+}
 .top-res {
   margin-top: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -62,20 +71,68 @@
   gap: 1.2rem;
 }
 .top-res-card{
-  max-width: 320px;
+  max-width: 254px;
   transition: 0.05s;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 5px 10px;
   border-radius: 6px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
 }
 
 .top-res-logo{
   width: 100%;
-  height: 65%;
+  height: 60%;
   padding: 0.2rem;
   border-radius: 16px;
+}
+.star-rating{
+  color: #fff;
+  background-color:rgb(10, 181, 10);
+  border-radius: 50%;
+}
+.heading-delhi{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1.2rem;
+  font-weight: 900;
+  padding: 1.2rem;
+  text-align: center;
+  background-color: #e94f1f;
+    color: #fff;
+}
+.top-delhi{
+  margin-top: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.search{
+  margin-top: 1.5rem;
+ 
+}
+.search-box{
+  cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+.search-btn{
+  cursor: pointer;
+    color: #fff;
+    background-color: #e94f1f;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1.2rem;
+    margin-left: .9rem;
+    padding: 15px 20px;
+    font-size: 12px;
+    font-weight: 700
 }
 @media (max-width: 875px) {
   .nav-items {
