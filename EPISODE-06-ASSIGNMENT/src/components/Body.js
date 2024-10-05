@@ -6,7 +6,7 @@ import { DELHI_TO_EXPLORE, KOLKATA_TO_EXPLORE } from "../utils/constant";
 const Body = () => {
   const [topRestaurant, setTopRestaurant] = useState([]);
   const [topDelhi, setTopDelhi] = useState([]);
-  const [searchText,setSearchText] = useState("")
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchKolkata(), fetchDelhi();
   }, []);
@@ -29,11 +29,40 @@ const Body = () => {
     );
   };
 
+  function handleSearch() {
+    if(searchText === ""){
+      setTopRestaurant(topRestaurant)
+      setTopDelhi(topDelhi)
+      return
+    }
+    const filterBySearch = topRestaurant.filter((res) => {
+      if (res.info.name.toLowerCase().includes(searchText.toLowerCase())) {
+        return res;
+      }
+    });
+    setTopRestaurant(filterBySearch);
+
+    const filterDelhi = topDelhi.filter((res)=>{
+      if (res.info.name.toLowerCase().includes(searchText.toLowerCase())) {
+        return res;
+      }
+    })
+    setTopDelhi(filterDelhi)
+  }
+
   return (
     <div className="Body">
       <div className="search">
-        <input type="text" className="search-box" placeholder="Search..." />
-        <button className="search-btn">Search</button>
+        <input
+          className="search-box"
+          placeholder="Search..."
+          type="text"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+        <button className="search-btn" onClick={handleSearch}>
+          Search
+        </button>
       </div>
       <h2 className="heading-kolkata">Top Restaurants in Kolkata</h2>
       <div className="top-res">
