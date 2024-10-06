@@ -14,7 +14,7 @@
 .logo {
   width: 10%;
 }
-.anchor-head{
+.anchor-head {
   text-decoration: none;
 }
 .logo-container {
@@ -56,14 +56,14 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.heading-kolkata{
+.heading-kolkata {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 1.2rem;
   font-weight: 900;
   padding: 1.2rem;
   text-align: center;
   background-color: #e94f1f;
-    color: #fff;
+  color: #fff;
 }
 .top-res {
   margin-top: 1.2rem;
@@ -73,37 +73,37 @@
   justify-content: center;
   gap: 1.2rem;
 }
-.top-res-card{
-  max-width: 284px;
+.top-res-card {
+  max-width: 290px;
   transition: 0.05s;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 5px 10px;
   border-radius: 6px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
 }
 
-.top-res-logo{
+.top-res-logo {
   width: 100%;
-  height: 55%;
+  height: 48%;
   padding: 0.2rem;
   border-radius: 16px;
 }
-.star-rating{
+.star-rating {
   color: #fff;
-  background-color:rgb(10, 181, 10);
+  background-color: rgb(10, 181, 10);
   border-radius: 50%;
 }
 
-.shimmer-container{
+.shimmer-container {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.2rem;
   margin-top: 1.2rem;
   display: flex;
 }
-.shimmer-card{
+.shimmer-card {
   cursor: pointer;
   border-radius: 6px;
   max-width: 320px;
@@ -112,22 +112,22 @@
   transition: all 50ms;
   box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
 }
-.res-logo{
+.res-logo {
   width: 100%;
   height: 65%;
   padding: 0.2rem;
   border-radius: 16px;
 }
-.heading-delhi{
+.heading-delhi {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 1.2rem;
   font-weight: 900;
   padding: 1.2rem;
   text-align: center;
   background-color: #e94f1f;
-    color: #fff;
+  color: #fff;
 }
-.top-delhi{
+.top-delhi {
   margin-top: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -135,30 +135,55 @@
   justify-content: center;
   gap: 1.2rem;
 }
-.search{
+.search {
   margin-top: 1.5rem;
- 
 }
-.search-box{
+.search-box {
   cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    padding: 15px 20px;
-    font-size: 15px;
-    font-weight: 700;
-    box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
 }
-.search-btn{
+.search-btn {
   cursor: pointer;
-    color: #fff;
-    background-color: #e94f1f;
-    border: none;
-    border-radius: 5px;
-    margin-top: 1.2rem;
-    margin-left: .9rem;
-    padding: 15px 20px;
-    font-size: 12px;
-    font-weight: 700
+  color: #fff;
+  background-color: #e94f1f;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.2rem;
+  margin-left: 0.9rem;
+  padding: 15px 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.city-container {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+.all-city {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.kolkata{
+  width: 10%;
+  border-radius: 50%;
+}
+.kolkata-img{
+  width: 100%;
+  border-radius: 50%;
+}
+.kolkata-txt{
+  text-align: center;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media (max-width: 875px) {
   .nav-items {

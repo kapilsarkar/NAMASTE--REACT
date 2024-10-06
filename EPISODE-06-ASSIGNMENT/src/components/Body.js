@@ -8,6 +8,8 @@ const Body = () => {
   const [topRestaurant, setTopRestaurant] = useState([]);
   const [topDelhi, setTopDelhi] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [filteredRes, setFilteredRes] = useState([]);
+
   useEffect(() => {
     fetchKolkata(), fetchDelhi();
   }, []);
@@ -19,6 +21,9 @@ const Body = () => {
     setTopRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setFilteredRes(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   const fetchDelhi = async () => {
@@ -26,6 +31,9 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
     setTopDelhi(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRes(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
@@ -51,10 +59,21 @@ const Body = () => {
     setTopDelhi(filterDelhi);
   }
 
-  return (topRestaurant.length && topDelhi.length) === 0 ? (
+  //FilterData
+  function handleAllSearch() {
+    const filterData = topRestaurant.filter((res) => {
+      return res.info.name.toLowerCase().includes(searchText.toLowerCase());
+    });
+
+    setTopRestaurant(filterData);
+    setTopDelhi(filterData);
+  }
+
+  return topRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="Body">
+      <h2 className="heading-kolkata">Top Restaurants in Kolkata</h2>
       <div className="search">
         <input
           className="search-box"
@@ -63,11 +82,11 @@ const Body = () => {
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button className="search-btn" onClick={handleSearch}>
+        <button className="search-btn" onClick={handleAllSearch}>
           Search
         </button>
       </div>
-      <h2 className="heading-kolkata">Top Restaurants in Kolkata</h2>
+      
       <div className="top-res">
         {topRestaurant.map((restaurant) => {
           return (
