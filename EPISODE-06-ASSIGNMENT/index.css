@@ -14,6 +14,9 @@
 .logo {
   width: 10%;
 }
+.anchor-head{
+  text-decoration: none;
+}
 .logo-container {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
@@ -71,7 +74,7 @@
   gap: 1.2rem;
 }
 .top-res-card{
-  max-width: 254px;
+  max-width: 284px;
   transition: 0.05s;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -83,7 +86,7 @@
 
 .top-res-logo{
   width: 100%;
-  height: 60%;
+  height: 55%;
   padding: 0.2rem;
   border-radius: 16px;
 }
@@ -91,6 +94,29 @@
   color: #fff;
   background-color:rgb(10, 181, 10);
   border-radius: 50%;
+}
+
+.shimmer-container{
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  display: flex;
+}
+.shimmer-card{
+  cursor: pointer;
+  border-radius: 6px;
+  max-width: 320px;
+  padding: 5px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: all 50ms;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+.res-logo{
+  width: 100%;
+  height: 65%;
+  padding: 0.2rem;
+  border-radius: 16px;
 }
 .heading-delhi{
   font-family: Arial, Helvetica, sans-serif;

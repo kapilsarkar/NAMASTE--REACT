@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import TopRestaurant from "./TopRestaurant";
 import TopDelhi from "./TopDelhi";
+import Shimmer from "./Shimmer";
 import { DELHI_TO_EXPLORE, KOLKATA_TO_EXPLORE } from "../utils/constant";
 
 const Body = () => {
@@ -30,10 +31,10 @@ const Body = () => {
   };
 
   function handleSearch() {
-    if(searchText === ""){
-      setTopRestaurant(topRestaurant)
-      setTopDelhi(topDelhi)
-      return
+    if (searchText === "") {
+      setTopRestaurant(topRestaurant);
+      setTopDelhi(topDelhi);
+      return;
     }
     const filterBySearch = topRestaurant.filter((res) => {
       if (res.info.name.toLowerCase().includes(searchText.toLowerCase())) {
@@ -42,15 +43,17 @@ const Body = () => {
     });
     setTopRestaurant(filterBySearch);
 
-    const filterDelhi = topDelhi.filter((res)=>{
+    const filterDelhi = topDelhi.filter((res) => {
       if (res.info.name.toLowerCase().includes(searchText.toLowerCase())) {
         return res;
       }
-    })
-    setTopDelhi(filterDelhi)
+    });
+    setTopDelhi(filterDelhi);
   }
 
-  return (
+  return (topRestaurant.length && topDelhi.length) === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="Body">
       <div className="search">
         <input

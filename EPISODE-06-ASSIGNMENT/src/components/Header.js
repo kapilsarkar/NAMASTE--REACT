@@ -7,10 +7,13 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
-        <h3 className="food-heading">Food App</h3>
-      </div>
+      <a href="/" className="anchor-head">
+        <div className="logo-container">
+          <img className="logo" src={LOGO_URL} />
+          <h3 className="food-heading">Food App</h3>
+        </div>
+      </a>
+
       <div className="nav-items">
         <ul>
           <li>Home</li>
