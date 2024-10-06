@@ -3,6 +3,7 @@ import { KOLKATA_IMG } from "../utils/constant";
 const City = () => {
   return (
     <div className="city-container">
+      <h3>Top City</h3>
       <div className="all-city">
         <div className="kolkata">
           <img className="kolkata-img" src={KOLKATA_IMG} />

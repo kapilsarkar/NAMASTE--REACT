@@ -17,7 +17,7 @@ const Body = () => {
   const fetchKolkata = async () => {
     const data = await fetch(KOLKATA_TO_EXPLORE);
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setTopRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -29,7 +29,7 @@ const Body = () => {
   const fetchDelhi = async () => {
     const data = await fetch(DELHI_TO_EXPLORE);
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setTopDelhi(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -66,7 +66,11 @@ const Body = () => {
     });
 
     setTopRestaurant(filterData);
-    setTopDelhi(filterData);
+  }
+
+  function allKolkata(){
+     fetchKolkata()
+     setSearchText("")
   }
 
   return topRestaurant.length === 0 ? (
@@ -85,6 +89,7 @@ const Body = () => {
         <button className="search-btn" onClick={handleAllSearch}>
           Search
         </button>
+        <button className="all-kolkataBtn" onClick={allKolkata}>All Restaurants</button>
       </div>
       
       <div className="top-res">
