@@ -9,6 +9,7 @@ const Body = () => {
   const [topDelhi, setTopDelhi] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredRes, setFilteredRes] = useState([]);
+  const [searchDelhiText, setSearchDelhiText] = useState("");
 
   useEffect(() => {
     fetchKolkata(), fetchDelhi();
@@ -38,27 +39,6 @@ const Body = () => {
     );
   };
 
-  function handleSearch() {
-    if (searchText === "") {
-      setTopRestaurant(topRestaurant);
-      setTopDelhi(topDelhi);
-      return;
-    }
-    const filterBySearch = topRestaurant.filter((res) => {
-      if (res.info.name.toLowerCase().includes(searchText.toLowerCase())) {
-        return res;
-      }
-    });
-    setTopRestaurant(filterBySearch);
-
-    const filterDelhi = topDelhi.filter((res) => {
-      if (res.info.name.toLowerCase().includes(searchText.toLowerCase())) {
-        return res;
-      }
-    });
-    setTopDelhi(filterDelhi);
-  }
-
   //FilterData
   function handleAllSearch() {
     const filterData = topRestaurant.filter((res) => {
@@ -68,9 +48,24 @@ const Body = () => {
     setTopRestaurant(filterData);
   }
 
-  function allKolkata(){
-     fetchKolkata()
-     setSearchText("")
+  function allKolkata() {
+    fetchKolkata();
+    setSearchText("");
+  }
+
+  function handleDelhiSearch() {
+    const filterData = topDelhi.filter((res) => {
+      return res.info.name
+        .toLowerCase()
+        .includes(searchDelhiText.toLowerCase());
+    });
+
+    setTopDelhi(filterData);
+  }
+
+  function allDelhi() {
+    fetchDelhi();
+    setSearchText("");
   }
 
   return topRestaurant.length === 0 ? (
@@ -89,9 +84,11 @@ const Body = () => {
         <button className="search-btn" onClick={handleAllSearch}>
           Search
         </button>
-        <button className="all-kolkataBtn" onClick={allKolkata}>All Restaurants</button>
+        <button className="all-kolkataBtn" onClick={allKolkata}>
+          All Restaurants
+        </button>
       </div>
-      
+
       <div className="top-res">
         {topRestaurant.map((restaurant) => {
           return (
@@ -100,6 +97,21 @@ const Body = () => {
         })}
       </div>
       <h2 className="heading-delhi">Top Restaurants in Delhi</h2>
+      <div className="search">
+        <input
+          className="search-box"
+          placeholder="Search..."
+          type="text"
+          value={searchDelhiText}
+          onChange={(e) => setSearchDelhiText(e.target.value)}
+        />
+        <button className="search-btn" onClick={handleDelhiSearch}>
+          Search
+        </button>
+        <button className="all-DelhiBtn" onClick={allDelhi}>
+          All Restaurants
+        </button>
+      </div>
       <div className="top-delhi">
         {topDelhi.map((restaurant) => {
           return <TopDelhi key={restaurant.info.id} resData={restaurant} />;
