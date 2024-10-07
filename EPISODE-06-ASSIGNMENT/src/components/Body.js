@@ -104,7 +104,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="Body">
-      <h2 className="heading-kolkata">Top Restaurants in Kolkata</h2>
+      <h2 className="heading-kolkata" id="kolkata">Top Restaurants in Kolkata</h2>
       <div className="search">
         <input
           className="search-box"
@@ -128,7 +128,7 @@ const Body = () => {
           );
         })}
       </div>
-      <h2 className="heading-delhi">Top Restaurants in Delhi</h2>
+      <h2 id="delhi" className="heading-delhi">Top Restaurants in Delhi</h2>
       <div className="search">
         <input
           className="search-box"
@@ -149,7 +149,7 @@ const Body = () => {
           return <TopDelhi key={restaurant.info.id} resData={restaurant} />;
         })}
       </div>
-      <h2 className="heading-bangalore">Top Restaurants in Bengaluru</h2>
+      <h2 id="bengaluru" className="heading-bangalore">Top Restaurants in Bengaluru</h2>
       <div className="search">
         <input
           className="search-box"
