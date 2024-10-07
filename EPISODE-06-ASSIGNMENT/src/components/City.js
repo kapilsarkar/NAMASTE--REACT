@@ -17,15 +17,7 @@ const City = () => {
         </div>
         <div className="kolkata">
           <img className="kolkata-img" src={BANGALORE_IMG} />
-          <p className="kolkata-txt">Bangalore</p>
-        </div>
-        <div className="kolkata">
-          <img className="kolkata-img" src={KOLKATA_IMG} />
-          <p className="kolkata-txt">Mumbai</p>
-        </div>
-        <div className="kolkata">
-          <img className="kolkata-img" src={KOLKATA_IMG} />
-          <p className="kolkata-txt">Pune</p>
+          <p className="kolkata-txt">Bengaluru</p>
         </div>
       </div>
     </div>

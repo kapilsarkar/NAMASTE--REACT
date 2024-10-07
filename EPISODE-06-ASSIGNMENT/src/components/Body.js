@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 import TopRestaurant from "./TopRestaurant";
 import TopDelhi from "./TopDelhi";
+import TopBengaluru from "./TopBengaluru";
 import Shimmer from "./Shimmer";
-import { DELHI_TO_EXPLORE, KOLKATA_TO_EXPLORE } from "../utils/constant";
+import {
+  DELHI_TO_EXPLORE,
+  KOLKATA_TO_EXPLORE,
+  BENGALURU_TO_EXPLORE,
+} from "../utils/constant";
 
 const Body = () => {
   const [topRestaurant, setTopRestaurant] = useState([]);
@@ -10,9 +15,11 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredRes, setFilteredRes] = useState([]);
   const [searchDelhiText, setSearchDelhiText] = useState("");
+  const [topBangalore, setTopBangalore] = useState([]);
+  const [searchBengaluruText, setSearchBengaluruText] = useState([]);
 
   useEffect(() => {
-    fetchKolkata(), fetchDelhi();
+    fetchKolkata(), fetchDelhi(), fetchBangalore();
   }, []);
 
   const fetchKolkata = async () => {
@@ -32,6 +39,17 @@ const Body = () => {
     const json = await data.json();
     // console.log(json);
     setTopDelhi(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRes(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
+
+  const fetchBangalore = async () => {
+    const data = await fetch(BENGALURU_TO_EXPLORE);
+    const json = await data.json();
+    setTopBangalore(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRes(
@@ -65,7 +83,21 @@ const Body = () => {
 
   function allDelhi() {
     fetchDelhi();
-    setSearchText("");
+    setSearchDelhiText("");
+  }
+  function handleBengaluruSearch() {
+    const filterData = topBangalore.filter((res) => {
+      return res.info.name
+        .toLowerCase()
+        .includes(searchBengaluruText.toLowerCase());
+    });
+
+    setTopBangalore(filterData);
+  }
+
+  function allBengaluru() {
+    fetchBangalore();
+    setSearchBengaluruText("");
   }
 
   return topRestaurant.length === 0 ? (
@@ -115,6 +147,27 @@ const Body = () => {
       <div className="top-delhi">
         {topDelhi.map((restaurant) => {
           return <TopDelhi key={restaurant.info.id} resData={restaurant} />;
+        })}
+      </div>
+      <h2 className="heading-bangalore">Top Restaurants in Bengaluru</h2>
+      <div className="search">
+        <input
+          className="search-box"
+          placeholder="Search..."
+          type="text"
+          value={searchBengaluruText}
+          onChange={(e) => setSearchBengaluruText(e.target.value)}
+        />
+        <button className="search-btn" onClick={handleBengaluruSearch}>
+          Search
+        </button>
+        <button className="all-BengaluruBtn" onClick={allBengaluru}>
+          All Restaurants
+        </button>
+      </div>
+      <div className="top-bengaluru">
+        {topBangalore.map((restaurant) => {
+          return <TopBengaluru key={restaurant.info.id} resData={restaurant} />;
         })}
       </div>
     </div>
