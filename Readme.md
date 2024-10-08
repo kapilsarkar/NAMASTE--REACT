@@ -141,5 +141,37 @@ Exploring React Hooks and understanding their importance.
 
 ---
 
+### 📚 EPISODE-06 (EXPLORING THE WORLD) 📗 :
+---
+
+Architecture insights, useEffect hook, and working with APIs.
+
+- 🧾 Topics Covered :
+
+   - Architecture, useEffect
+
+   - Conditional Rendering
+
+   - API Usage
+
+   - Resolve Swiggy API Issue
+
+   - Resolve CORS Problem
+
+- 📒  EXPLORING THE WORLD(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-06-EXPLORING%20THE%20WORLD)
+
+- 💻 EXPLORING THE WORLD(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-06-ASSIGNMENT)
+
+- 📔 ASSIGNMENT :
+
+    - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️   [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B06%2B-%2BExploring%2Bthe%2Bworld.pdf)
+
+    - 🔖 EXPLORING THE WORLD(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-06-ASSIGNMENT)
+
+
+    - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://namaste-react-woad.vercel.app/)
+
+
+
 
 
