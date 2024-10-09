@@ -158,6 +158,8 @@ Architecture insights, useEffect hook, and working with APIs.
 
    - Resolve CORS Problem
 
+   - Shimmer UI
+
 - 📒  EXPLORING THE WORLD(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-06-EXPLORING%20THE%20WORLD)
 
 - 💻 EXPLORING THE WORLD(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-06-ASSIGNMENT)
