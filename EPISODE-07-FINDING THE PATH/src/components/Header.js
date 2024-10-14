@@ -3,7 +3,7 @@ import { FaCartArrowDown } from "react-icons/fa";
 import { useState } from "react";
 
 const Header = () => {
-  
+  const [btnNameReact, setBtnNameREact] = useState("Login");
   return (
     <div className="header">
       <a href="/" className="anchor-head">
@@ -22,9 +22,18 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <button className="loginBtn">Login</button>
+      <button
+        className="loginBtn"
+        onClick={() => {
+          btnNameReact === "Login"
+            ? setBtnNameREact("Logout")
+            : setBtnNameREact("Login");
+        }}
+      >
+        {btnNameReact}
+      </button>
     </div>
   );
 };
 
-export default Header
+export default Header;
