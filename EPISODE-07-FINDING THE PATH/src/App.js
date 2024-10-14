@@ -1,1 +1,13 @@
-// https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&collection=80377&tags=&sortBy=&filters=&type=rcv2&offset=0&page_type=null
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
+const AppLayout = () => {
+    return (
+      <div className="app">
+        <Header/>
+      </div>
+    );
+  };
+  
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<AppLayout />);
