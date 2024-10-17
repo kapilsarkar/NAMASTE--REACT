@@ -1,9 +1,13 @@
 import { LOGO_URL } from "../utils/constant";
 import { FaCartArrowDown } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [btnNameReact, setBtnNameREact] = useState("Login");
+  console.log("Header Called")
+  useEffect(()=>{
+    console.log("useEffect called")
+  },[])
   return (
     <div className="header">
       <a href="/" className="anchor-head">

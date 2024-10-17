@@ -9,13 +9,12 @@ const TopRestaurant = () => {
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchTopRestaurant();
-    fetchTopRestaurantTwo();
   }, []);
 
   const fetchTopRestaurant = async () => {
     const data = await fetch(FETCH_TOP_RES);
     const json = await data.json();
-    console.log(json);
+    //console.log(json);
     setTopRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -64,13 +63,6 @@ const TopRestaurant = () => {
         {topRestaurant.map((restaurant) => {
           return (
             <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-          );
-        })}
-      </div>
-      <div className="top-res">
-        {newTopRestaurant.map((restaurant) => {
-          return (
-            <RestaurantCard2 key={restaurant.info.id} resData={restaurant} />
           );
         })}
       </div>
