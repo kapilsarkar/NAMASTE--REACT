@@ -41,7 +41,9 @@
     cursor: pointer;
     border-radius: 5px;
   }
-  
+  a{
+    text-decoration: none;
+  }
   .nav-items > ul > li:hover {
     color: #fff;
     background-color: #e94f1f;
