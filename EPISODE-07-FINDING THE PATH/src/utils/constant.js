@@ -9,6 +9,6 @@ export const LOGO_URL =
 
   // https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&collection=80377&tags=&sortBy=&filters=&type=rcv2&offset=0&page_type=null
 
-  export const FETCH_TOP_RES = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7333148&lng=76.7794179&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  export const FETCH_TOP_RES = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
   export const FETCH_TOP_RES2 = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.022505&lng=72.5713621&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
