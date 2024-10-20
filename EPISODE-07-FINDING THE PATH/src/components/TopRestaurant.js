@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { FETCH_TOP_RES, FETCH_TOP_RES2 } from "../utils/constant";
 import RestaurantCard from "./RestaurantCard";
-import RestaurantCard2 from "./RestaurantCard2";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 const TopRestaurant = () => {
   const [topRestaurant, setTopRestaurant] = useState([]);
-  const [newTopRestaurant, setNewTopRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchTopRestaurant();
@@ -20,14 +19,6 @@ const TopRestaurant = () => {
     );
   };
 
-  const fetchTopRestaurantTwo = async () => {
-    const data = await fetch(FETCH_TOP_RES2);
-    const json = await data.json();
-    console.log(json);
-    setNewTopRestaurant(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
   const handleAllSearch = () => {
     const filterData = topRestaurant.filter((res) => {
       return res.info.name.toLowerCase().includes(searchText.toLowerCase());
@@ -57,12 +48,19 @@ const TopRestaurant = () => {
         <button className="search-btn" onClick={handleAllSearch}>
           Search
         </button>
-        <button className="allResBtn" onClick={AllRestaurant}>All Restaurants</button>
+        <button className="allResBtn" onClick={AllRestaurant}>
+          All Restaurants
+        </button>
       </div>
       <div className="top-res">
         {topRestaurant.map((restaurant) => {
           return (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+            <Link className="res-menu"
+              key={restaurant.info.id}
+              to={"/restaurants/" + restaurant.info.id}
+            >
+              <RestaurantCard resData={restaurant} />
+            </Link>
           );
         })}
       </div>
