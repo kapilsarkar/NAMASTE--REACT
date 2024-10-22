@@ -1,6 +1,119 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo {
+  width: 10%;
+}
+.anchor-head {
+  text-decoration: none;
+}
+.logo-container {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 10px;
+}
+.food-heading {
+  margin-top: 25px;
+}
+
+.nav-items > ul {
+  list-style: none;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  gap: 2rem;
+}
+.nav-items > ul > li {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-items > ul > li:hover {
+  color: #fff;
+  background-color: #e94f1f;
+}
+
+.loginBtn {
+  border: none;
+  padding: 6px 12px;
+  background-color: #e94f1f;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.TopHeading {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1.2rem;
+  font-weight: 900;
+  padding: 1.2rem;
+  text-align: center;
+  background-color: #e94f1f;
+  color: #fff;
+}
+.res-card {
+  max-width: 320px;
+  transition: 0.05s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+}
+
+.res-logo {
+  width: 100%;
+  height: 55%;
+  padding: 0.2rem;
+  border-radius: 16px;
+}
+.star-rating {
+  color: #fff;
+  background-color: rgb(10, 181, 10);
+  border-radius: 50%;
+}
+
+.top-res {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.shimmer-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  display: flex;
+}
+.shimmer-card {
+  cursor: pointer;
+  border-radius: 6px;
+  max-width: 300px;
+  padding: 5px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: all 50ms;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+@media (max-width: 875px) {
+  .nav-items {
+    display: none;
+  }
 }
