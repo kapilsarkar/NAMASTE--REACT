@@ -1,7 +1,9 @@
+import { ABOUT_IMG } from "../utils/constant";
 const About = () => {
   return (
-    <div>
-      <h1>About Us</h1>
+    <div className="about-container">
+      <h1 className="about-head">Welcome to The<span className="about-head-main">Food App</span></h1>
+      <img className="about-img" src={ABOUT_IMG}/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { RESTAURANT_URL } from "../utils/constant";
+import { RESTAURANT_URL, EDUCORS_URL, ApiKey} from "../utils/constant";
 import TopRestaurant from "./TopRestaurant";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
@@ -8,9 +8,12 @@ const Body = () => {
   useEffect(() => {
     fetchTopRestaurant();
   }, []);
-
+  
+  
   const fetchTopRestaurant = async () => {
-    const data = await fetch(RESTAURANT_URL);
+    const data = await fetch(`${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(
+    RESTAURANT_URL
+  )}` );
     const json = await data.json();
     console.log(json);
     setTopRestaurant(
