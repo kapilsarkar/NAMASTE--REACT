@@ -2,11 +2,11 @@ import { CONTACT_IMG } from "../utils/constant";
 import { useState } from "react";
 
 const Contact = () => {
-    const [msg,setMsg] = useState(false)
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        setMsg(true)
-    }
+  const [msg, setMsg] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setMsg(true);
+  };
   return (
     <div className="contact-container">
       <h1 className="contact-head">Contact Us</h1>
