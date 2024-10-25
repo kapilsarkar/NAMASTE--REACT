@@ -1,13 +1,15 @@
-import { useEffect,useState } from "react";
+import { useEffect,useState} from "react";
 import Shimmer from "./Shimmer";
-import { MENU_API, MENU_IMG } from "../utils/constant";
+import { MENU_API, MENU_IMG,EDUCORS_URL, ApiKey } from "../utils/constant";
 const RestaurantMenu = () => {
   const [resInfo,setResInfo] = useState(null)
   useEffect(() => {
     fetchMenu();
   }, []);
   const fetchMenu = async () => {
-    const data = await fetch(MENU_API);
+    const data = await fetch(`${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(
+    MENU_API
+  )}` );
     const json = await data.json();
     console.log(json);
     setResInfo(json.data)
