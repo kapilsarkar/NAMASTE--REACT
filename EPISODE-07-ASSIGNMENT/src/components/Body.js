@@ -2,6 +2,7 @@ import { RESTAURANT_URL, EDUCORS_URL, ApiKey } from "../utils/constant";
 import TopRestaurant from "./TopRestaurant";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const Body = () => {
   const [topRestaurant, setTopRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -58,8 +59,8 @@ const Body = () => {
         </h2>
         <div className="top-res">
           {topRestaurant.map((restaurant) => {
-            return (
-              <TopRestaurant key={restaurant.info.id} resData={restaurant} />
+            return ( <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}> <TopRestaurant resData={restaurant} /></Link>
+             
             );
           })}
         </div>
