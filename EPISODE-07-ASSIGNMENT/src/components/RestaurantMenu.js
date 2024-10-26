@@ -38,21 +38,26 @@ const RestaurantMenu = () => {
         <img className="restaurant-img" src={MENU_IMG + cloudinaryImageId} />
         <div className="restaurant-summary-details">
           <h2 className="restaurant-title">{name}</h2>
-          <p className="restaurant-rating"><MdStarRate className="star-rating"/>{avgRating} | {resInfo?.cards[2]?.card?.card?.info?.sla?.deliveryTime}mins</p>
+          <p className="restaurant-rating">
+            <MdStarRate className="star-rating" />
+            {avgRating} |{" "}
+            {resInfo?.cards[2]?.card?.card?.info?.sla?.deliveryTime}mins
+          </p>
           <p>{cuisines.join(",")}</p>
           <p>{city}</p>
           <p>{costForTwoMessage}</p>
         </div>
       </div>
-
+      ``
       <h3>Menu</h3>
       <ul>
         {itemCards.map((item) => {
           return (
-            <li key={item.card.info.id}>
+            <div key={item.card.info.id}>
               {item.card.info.name} - {"Rs"}
-              {item.card.info.price / 100}
-            </li>
+              {item.card.info.price} 
+              <p>{item.card.info.description}</p>
+            </div>
           );
         })}
       </ul>
