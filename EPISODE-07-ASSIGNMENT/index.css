@@ -4,10 +4,10 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-a{
+a {
   text-decoration: none;
 }
-.container{
+.container {
   width: 100%;
 }
 
@@ -80,6 +80,7 @@ a{
   border-radius: 6px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
+  height: 460px;
 }
 
 .res-logo {
@@ -100,6 +101,7 @@ a{
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.2rem;
+  width: auto;
 }
 .shimmer-container {
   flex-wrap: wrap;
@@ -144,7 +146,7 @@ a{
   font-size: 12px;
   font-weight: 700;
 }
-.allRes-btn{
+.allRes-btn {
   cursor: pointer;
   color: #fff;
   background-color: #e94f1f;
@@ -155,25 +157,24 @@ a{
   font-size: 12px;
   font-weight: 700;
 }
-.about-container{
+.about-container {
   width: 100%;
 }
-.about-head{
+.about-head {
   margin-top: 3rem;
   font-size: 32px;
   font-weight: 900;
   padding: 1.5rem;
-
 }
-.about-head-main{
+.about-head-main {
   background-color: #e94f1f;
   color: #fff;
   padding: 2rem;
 }
-.about-img{
+.about-img {
   width: 100%;
 }
-.contact-container{
+.contact-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -181,8 +182,8 @@ a{
   overflow-y: hidden;
   margin-top: 0.5rem;
 }
-.contact-left img{
-   width: 100%;
+.contact-left img {
+  width: 100%;
 }
 .contact-container .contact-right {
   display: flex;
@@ -204,7 +205,7 @@ a{
   box-sizing: border-box;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
   border: 2px solid #aabcca;
-  width:100%;
+  width: 100%;
 }
 .contact-container .contact-right form textarea {
   padding: 10px;
@@ -226,21 +227,57 @@ a{
   border-radius: 5px;
 }
 
-.contact-head{
+.contact-head {
   margin-top: 2rem;
   font-size: 32px;
   font-weight: 900;
+}
+.restaurant-menu {
+  width: 100%;
+  padding: 1.2rem;
+}
+.restaurant-summary {
+  min-height: 200px;
+  background-color: #e94f1f;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 900;
+}
+.restaurant-img {
+  width: 250px;
+  height: 170px;
+  border-radius: 5px;
+}
+.restaurant-summary-details {
+  flex-direction: column;
+  margin: 20px;
+  display: flex;
+}
+.restaurant-title {
+  font-size: 32px;
+  font-weight: 900;
+}
+.restaurant-rating {
+  background-color: #097309;
+  border-radius: 5px;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  display: flex;
 }
 @media (max-width: 875px) {
   .nav-items {
     display: none;
   }
 }
-@media(max-width:560px){
-  .about-head{
+@media (max-width: 560px) {
+  .about-head {
     font-size: 18px;
   }
-  .about-head-main{
+  .about-head-main {
     font-size: 18px;
     padding: 0.5rem;
   }
