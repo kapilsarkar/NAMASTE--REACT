@@ -17,7 +17,7 @@ const Body = () => {
       )}`
     );
     const json = await data.json();
-    console.log(json);
+    //console.log(json);
     setTopRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -59,8 +59,14 @@ const Body = () => {
         </h2>
         <div className="top-res">
           {topRestaurant.map((restaurant) => {
-            return ( <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}> <TopRestaurant resData={restaurant} /></Link>
-             
+            return (
+              <Link
+                key={restaurant.info.id}
+                to={"/restaurants/" + restaurant.info.id}
+              >
+                {" "}
+                <TopRestaurant resData={restaurant} />
+              </Link>
             );
           })}
         </div>

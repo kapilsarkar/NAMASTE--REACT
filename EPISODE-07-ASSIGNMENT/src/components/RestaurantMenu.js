@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API, MENU_IMG, EDUCORS_URL, ApiKey } from "../utils/constant";
+import { MENU_API, MENU_IMG, EACH_MENU_IMG, EDUCORS_URL, ApiKey } from "../utils/constant";
 import { MdStarRate } from "react-icons/md";
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
       )}`
     );
     const json = await data.json();
-    console.log(json);
+    //console.log(json);
     setResInfo(json.data);
   };
   if (resInfo === null) return <Shimmer />;
@@ -31,7 +31,7 @@ const RestaurantMenu = () => {
 
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-  console.log(itemCards);
+  //console.log(itemCards);
   return (
     <div className="restaurant-menu">
       <div className="restaurant-summary">
@@ -48,15 +48,22 @@ const RestaurantMenu = () => {
           <p>{costForTwoMessage}</p>
         </div>
       </div>
-      ``
-      <h3>Menu</h3>
+
+      <h3 className="recommend-head">Menu</h3>
       <ul>
         {itemCards.map((item) => {
           return (
-            <div key={item.card.info.id}>
-              {item.card.info.name} - {"Rs"}
-              {item.card.info.price} 
-              <p>{item.card.info.description}</p>
+            <div key={item.card.info.id} className="all-menu">
+             
+              <div className="all-menu-description-left">
+                <h3>{item?.card?.info?.name}</h3> - {"₹"}
+                {item?.card?.info?.price}
+                <p className="menu-desc">{item?.card?.info?.description}</p>
+              </div>
+              <div className="all-menu-description-right">
+                <img src={EACH_MENU_IMG+item?.card?.info?.imageId}/>
+              </div>
+             
             </div>
           );
         })}
