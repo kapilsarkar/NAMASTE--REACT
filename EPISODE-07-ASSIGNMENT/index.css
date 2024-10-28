@@ -361,17 +361,15 @@ a {
   margin-top: 1.2rem;
 }
 .kolkata {
-  cursor: pointer;
-  border-radius: 50%;
-  width: 9%;
-  box-shadow: 0 4px 20px #d3491e, 0 6px 20px #b47777;
-  background-color: #d94718;
-  color: #fff;
-  text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #FF9800;
+    width: 10%;
+    text-decoration: none;
+    box-shadow: 0 4px 20px #28632b, 0 6px 20px #f5430a;
 }
 .kolkata-img {
   width: 100%;
-  border-radius: 50%;
 }
 .kolkata-txt {
   text-align: center;

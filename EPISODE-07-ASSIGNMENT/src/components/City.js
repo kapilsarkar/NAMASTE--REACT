@@ -1,6 +1,6 @@
 import { KOLKATA_IMG } from "../utils/constant";
 import { DELHI_IMG } from "../utils/constant";
-import { BANGALORE_IMG } from "../utils/constant";
+import { BANGALORE_IMG,MUMBAI_IMG } from "../utils/constant";
 import { Link } from "react-router-dom";
 const City = () => {
   return (
@@ -18,6 +18,14 @@ const City = () => {
         <a href="#bengaluru" className="kolkata">
           <img className="kolkata-img" src={BANGALORE_IMG} />
           <p className="kolkata-txt">Bengaluru</p>
+        </a>
+        <a href="#bengaluru" className="kolkata">
+          <img className="kolkata-img" src={MUMBAI_IMG} />
+          <p className="kolkata-txt">Mumbai</p>
+        </a>
+        <a href="#bengaluru" className="kolkata">
+          <img className="kolkata-img" src={BANGALORE_IMG} />
+          <p className="kolkata-txt">Jaipur</p>
         </a>
       </div>
     </div>
