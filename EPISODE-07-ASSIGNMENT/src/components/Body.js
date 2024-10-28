@@ -37,6 +37,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="Body">
+      <h2 className="search-head">Search Restaurant</h2>
       <div className="container">
         <div className="search">
           <input

@@ -29,9 +29,14 @@ export const MENU_IMG =
 export const EACH_MENU_IMG =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
 
+export const KOLKATA_IMG =
+  "https://i0.wp.com/thestrongtraveller.com/wp-content/uploads/2021/04/00100dPORTRAIT_00100_BURST20200619171529597_COVER-02-min.jpg?fit=960%2C720&ssl=1";
 
-  export const KOLKATA_IMG = "https://i0.wp.com/thestrongtraveller.com/wp-content/uploads/2021/04/00100dPORTRAIT_00100_BURST20200619171529597_COVER-02-min.jpg?fit=960%2C720&ssl=1";
+export const DELHI_IMG =
+  "https://moha-mushkil.com/wp-content/uploads/2018/08/Chache-di-hatti-.jpg";
 
-  export const DELHI_IMG = "https://moha-mushkil.com/wp-content/uploads/2018/08/Chache-di-hatti-.jpg";
-  
-  export const BANGALORE_IMG = "https://www.treebo.com/blog/wp-content/uploads/2018/03/Dosas.jpg"
+export const BANGALORE_IMG =
+  "https://www.treebo.com/blog/wp-content/uploads/2018/03/Dosas.jpg";
+
+export const KOLKATA_TO_EXPLORE =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.4954988&lng=88.3709008&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
