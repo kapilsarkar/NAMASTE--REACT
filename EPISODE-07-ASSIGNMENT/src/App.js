@@ -9,6 +9,10 @@ import  Error  from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Footer from "./components/Footer";
 import Kolkata from "./components/Kolkata";
+import Delhi from "./components/Delhi";
+import Mumbai from "./components/Mumbai";
+import Bengaluru from "./components/Bengaluru";
+import Jaipur from "./components/Jaipur";
 const AppLayout = () => {
     return (
       <div className="app">
@@ -42,6 +46,22 @@ const appRouter = createBrowserRouter([
       {
         path:"/kolkata",
         element:<Kolkata/>,
+      },
+      {
+        path:"/delhi",
+        element:<Delhi/>
+      },
+      {
+        path:"/mumbai",
+        element:<Mumbai/>
+      },
+      {
+         path:"/bengaluru",
+         element:<Bengaluru/>,
+      },
+      {
+       path:"/jaipur",
+       element:<Jaipur/>,
       },
     ],
     errorElement: <Error/>,
