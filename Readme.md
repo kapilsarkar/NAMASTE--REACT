@@ -160,6 +160,7 @@ Architecture insights, useEffect hook, and working with APIs.
 
    - Shimmer UI
 
+
 - 📒  EXPLORING THE WORLD(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-06-EXPLORING%20THE%20WORLD)
 
 - 💻 EXPLORING THE WORLD(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-06-ASSIGNMENT)
@@ -172,6 +173,34 @@ Architecture insights, useEffect hook, and working with APIs.
 
 
     - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://namaste-react-woad.vercel.app/)
+---
+
+### 📚 EPISODE-07 (FINDING THE PATH) 📗 :
+---
+Mastering React Router for smooth navigation and routing.
+
+- 🧾 Topics Covered:
+ 
+   - React Router
+
+   - Dynamic Routing
+
+   - Outlet Component
+
+   - Resolve CORS Problem
+
+- 📒  FINDING THE PATH(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-07-FINDING%20THE%20PATH)
+
+- 💻 FINDING THE PATH(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-07-ASSIGNMENT)
+
+- 📔 ASSIGNMENT :
+
+    - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️   [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B07%2B-%2BFinding%2Bthe%2BPath.pdf)
+
+    - 🔖 FINDING THE PATH(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-07-ASSIGNMENT)
+
+
+    - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://swiggyliveapikapil.netlify.app/)
 
 ---
 
