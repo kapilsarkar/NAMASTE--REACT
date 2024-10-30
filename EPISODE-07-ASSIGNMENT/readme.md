@@ -10,8 +10,9 @@
 - Create a Restaurant Page with dynamic restaurant ID.
 - (Extra) - Create a login Page using Formik Library.
 
+[LIVE LINK](https://swiggyliveapikapil.netlify.app/)
+
 ![IMG](./1.png)
 
 ![IMG](./2.png)
 
-[LIVE LINK](https://swiggyliveapikapil.netlify.app/)
