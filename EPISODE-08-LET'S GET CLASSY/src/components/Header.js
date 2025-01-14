@@ -1,42 +1,31 @@
 import { LOGO_URL } from "../utils/constant";
-import { FaCartArrowDown } from "react-icons/fa";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
+import { useState } from "react";
 const Header = () => {
-  const [btnNameReact, setBtnNameREact] = useState("Login");
-  console.log("Header Called")
-  useEffect(()=>{
-    console.log("useEffect called")
-  },[])
+  const [btnNameReact, setBtnNameReact] = useState("Login");
   return (
     <div className="header">
-      <Link to="/" className="anchor-head">
-        <div className="logo-container">
-          <img className="logo" src={LOGO_URL} />
-          <h3 className="food-heading">Food App</h3>
-        </div>
-      </Link>
+      <div className="logo-container">
+        <img className="logo" src={LOGO_URL} />
+        <h3 className="food-heading">Food App</h3>
+      </div>
       <div className="nav-items">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li> <Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li>
-            <FaCartArrowDown />
-          </li>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+          <button
+            className="loginBtn"
+            onClick={() => {
+              btnNameReact === "Login"
+                ? setBtnNameReact("Logout")
+                : setBtnNameReact("Login");
+            }}
+          >
+            {btnNameReact}
+          </button>
         </ul>
       </div>
-      <button
-        className="loginBtn"
-        onClick={() => {
-          btnNameReact === "Login"
-            ? setBtnNameREact("Logout")
-            : setBtnNameREact("Login");
-        }}
-      >
-        {btnNameReact}
-      </button>
     </div>
   );
 };
