@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import TopRestaurant from "./TopRestaurant";
 import Shimmer from "./Shimmer";
-
+import { Link } from "react-router-dom";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -55,7 +55,12 @@ const Body = () => {
       <div className="top-res">
         {listOfRestaurants.map((restaurant) => {
           return (
-            <TopRestaurant key={restaurant.info.id} resData={restaurant} />
+            <Link
+              key={restaurant.info.id}
+              to={"/restaurants/" + restaurant.info.id}
+            > {" "}
+              <TopRestaurant resData={restaurant} />
+            </Link>
           );
         })}
       </div>

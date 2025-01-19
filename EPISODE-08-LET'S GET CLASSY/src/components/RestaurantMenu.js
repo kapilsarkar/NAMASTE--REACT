@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import { MdStarRate } from "react-icons/md";
-import { EACH_MENU_IMG } from "../utils/constant";
+import { EACH_MENU_IMG, MENU_IMG, MENU_API } from "../utils/constant";
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
-
+  const { resId } = useParams();
   useEffect(() => {
     fetchMenu();
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId=651011&catalog_qa=undefined&submitAction=ENTER"
-    );
+    const data = await fetch(MENU_API + resId);
     const json = await data.json();
     console.log(json);
     setResInfo(json.data);
@@ -32,8 +31,14 @@ const RestaurantMenu = () => {
   return (
     <div className="restaurant-menu">
       <div className="restaurant-summary">
+        <img className="restaurant-img" src={MENU_IMG + cloudinaryImageId} />
         <div className="restaurant-summary-details">
           <h2 className="restaurant-title">{name}</h2>
+          <p className="restaurant-rating">
+            <MdStarRate className="star-rating" />
+            {avgRating} |{" "}
+            {resInfo?.cards[2]?.card?.card?.info?.sla?.deliveryTime}mins
+          </p>
           <p>{cuisines.join(",")}</p>
           <p>{city}</p>
           <p>{costForTwoMessage}</p>
