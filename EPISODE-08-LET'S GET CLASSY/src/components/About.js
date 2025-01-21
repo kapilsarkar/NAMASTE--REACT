@@ -9,8 +9,8 @@ const About = () => {
         Welcome to The<span className="about-head-main">Food App</span>
       </h1>
       <img className="about-img" src={ABOUT_IMG} />
-      <User/>
-      <UserClass/>
+      <User name={"Kapil Sarkar(function)"}/>
+      <UserClass name={"Kapil Sarkar (class)"} location={"Asansol(class)"}/>
     </div>
   );
 };
