@@ -1,15 +1,15 @@
 import React from "react";
 
 class UserClass extends React.Component {
-  constructor(props){
-    super(props)
-    this.state={
-      count :0,
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
   }
   render() {
-    const {name,location} = this.props;
-    const {count} = this.state;
+    const { name, location } = this.props;
+    const { count } = this.state;
     return (
       <div className="userCard">
         <h2>React-JS Class Based Component</h2>
