@@ -12,6 +12,9 @@ class About extends React.Component {
   componentDidMount(){
     console.log("Parent Component Did Mount Parent")
   }
+  componentWillUnmount(){
+    console.log("Component will Unmount");
+  }
   render() {
     console.log("Parent Render")
     return (
@@ -22,7 +25,6 @@ class About extends React.Component {
         <img className="about-img" src={ABOUT_IMG} />
         <h2>About Class Component</h2>
         <UserClass name={"Kapil Sarkar (class)"} location={"Asansol(class)"} />
-        <UserClass name={"Elon Mask (class)"} location={"US (class)"} />
       </div>
     );
   }
