@@ -1,8 +1,8 @@
 import { DefaultContext } from "react-icons";
 import { ABOUT_IMG } from "../utils/constant";
-import User from "./User";
 import UserClass from "./UserClass";
 import React from "react";
+import Profile from "./Profile";
 
 class About extends React.Component {
   constructor(props){
@@ -25,6 +25,7 @@ class About extends React.Component {
         <img className="about-img" src={ABOUT_IMG} />
         <h2>About Class Component</h2>
         <UserClass name={"Kapil Sarkar (class)"} location={"Asansol(class)"} />
+        <Profile/>
       </div>
     );
   }
