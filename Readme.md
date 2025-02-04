@@ -204,6 +204,31 @@ Mastering React Router for smooth navigation and routing.
 
 ---
 
+### 📚 EPISODE-08 (LET'S GET CLASSY) 📗 :
+---
+Learning Class-based components and their lifecycles.
+
+- 🧾 Topics Covered:
+
+   - Class Based Components.
+
+   - Life Cycle Methods.
+
+- 📒  LET'S GET CLASSY(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-08-LET'S%20GET%20CLASSY)
+
+- 📔 ASSIGNMENT :
+
+    - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️   [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B08%2B-%2BLet's%2Bget%2BClassy.pdf)
+
+---
+
+
+
+
+
+
+
+
 
 
 
