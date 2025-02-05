@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "browserslist": "^4.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^6.28.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "name": "episode-08-optimizing-our-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "kapil",
+  "license": "ISC",
+  "description": ""
+}
