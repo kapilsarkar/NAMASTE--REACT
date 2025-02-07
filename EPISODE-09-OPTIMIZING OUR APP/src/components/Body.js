@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import TopRestaurant from "./TopRestaurant";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import { RESTAURANT_URL } from "../utils/constant";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -20,7 +21,7 @@ const Body = () => {
   };
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.4954988&lng=88.3709008&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      RESTAURANT_URL
     );
     const json = await data.json();
     setListOfRestaurants(
