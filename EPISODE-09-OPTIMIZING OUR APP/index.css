@@ -334,6 +334,22 @@ a {
   padding: 10px;
   border: 1px solid black;
 }
+.about-profile-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.profile-btn{
+  cursor: pointer;
+  color: #fff;
+  background-color: #e94f1f;
+  border: none;
+  border-radius: 5px;
+  margin-inline: auto;
+  padding: 15px 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
 @media (max-width: 875px) {
   .nav-items {
     display: none;
