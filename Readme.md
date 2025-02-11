@@ -237,13 +237,13 @@ Advanced optimization techniques including Custom Hooks.
 
 - 📒  OPTIMIZING OUR APP(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-09-OPTIMIZING%20OUR%20APP)
 
-- 💻 OPTIMIZING OUR APP(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-07-ASSIGNMENT)
+- 💻 OPTIMIZING OUR APP(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-09-OPTIMIZING%20OUR%20APP/Coding.md)
 
 - 📔 ASSIGNMENT :
 
     - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️   [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B09%2B-%2BOptimizing%2Bour%2BApp.pdf)
 
-    - 🔖 OPTIMIZING OUR APP(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-07-ASSIGNMENT)
+    - 🔖 OPTIMIZING OUR APP(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-09-OPTIMIZING%20OUR%20APP/Coding.md)
 
 
     - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://glittery-dieffenbachia-b89297.netlify.app/)
