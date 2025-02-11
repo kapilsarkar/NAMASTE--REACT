@@ -12,10 +12,10 @@ const Profile = ()=>{
       setProfileData(json)
   }
     return (
-        <div className="">
-          <h2>{profileData.name}</h2>
-          <img src={profileData.avatar_url}/>
-          <p>{profileData.bio}</p>
+        <div className="profile-container">
+          <h2>Profile-Name:{profileData.name}</h2>
+          <img className="profile-img" src={profileData.avatar_url}/>
+          <p>Profile:{profileData.bio}</p>
         </div>
     )
 }
