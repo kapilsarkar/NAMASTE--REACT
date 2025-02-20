@@ -6,27 +6,27 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="flex">
-      <div className="logo-container">
-        <img className="w-10" src={LOGO_URL} />
-        <h3 className="food-heading">Food App</h3>
+    <div className="w-full flex justify-evenly items-center shadow-2xl">
+      <div className="p-3 flex text-2xl font-bold">
+        <img className="w-16 animate-pulse" src={LOGO_URL} />
+        <h3 className="mt-6">Food App</h3>
       </div>
-      <div className=" flex justify-center">
-        <ul className=" flex gap-2 justify-between p-2">
-          <li>Online Status {onlineStatus ? "🟢" : "🔴"}</li>
-          <li>
+      <div className=" flex justify-center font-bold">
+        <ul className=" flex gap-2 justify-between p-2 cursor-pointer">
+          <li className="p-1.5">Online Status {onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="p-1.5">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="p-1.5 hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
             <Link to="/about">About Us</Link>
           </li>
-          <li>
+          <li className="p-1.5">
             <Link to="/contact">Contact Us</Link>{" "}
           </li>
-          <li>
+          <li className="p-1.5">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>Cart</li>
+          <li className="p-1.5">Cart</li>
           <button
             className="loginBtn"
             onClick={() => {
