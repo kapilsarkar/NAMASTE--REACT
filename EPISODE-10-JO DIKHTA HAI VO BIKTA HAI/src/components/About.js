@@ -5,15 +5,21 @@ import { Link, Outlet } from "react-router-dom";
 const About = () => {
   const [show, setShow] = useState(false);
   return (
-    <div className="about-container">
-      <h1 className="about-head">
-        Welcome to The<span className="about-head-main">Food App</span>
+    <div className="w-full">
+      <h1 className="mt-3 p-2 font-bold text-xl md:text-3xl text-center">
+        Welcome to The
+        <span className=" ml-1.5 rounded-xl text-white bg-orange-500 p-2">
+          Food App
+        </span>
       </h1>
-      <div className="about-profile-container">
+      <div className="flex justify-center mt-2">
         {show ? (
           <>
             <Link to={"/about"}>
-              <button className="profile-btn" onClick={() => setShow(false)}>
+              <button
+                className="cursor-pointer text-white bg-orange-600 border-none rounded-xs p-3 font-bold"
+                onClick={() => setShow(false)}
+              >
                 Hide My Profile
               </button>
             </Link>
@@ -21,13 +27,13 @@ const About = () => {
           </>
         ) : (
           <Link to={"profile"}>
-            <button className="profile-btn" onClick={() => setShow(true)}>
+            <button className="cursor-pointer text-white bg-orange-600 border-none rounded-xs p-3 font-bold" onClick={() => setShow(true)}>
               Show My Profile
             </button>
           </Link>
         )}
       </div>
-      <img className="about-img" src={ABOUT_IMG} />
+      <img className=" w-full" src={ABOUT_IMG} />
     </div>
   );
 };

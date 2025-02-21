@@ -12,9 +12,9 @@ const Profile = ()=>{
       setProfileData(json)
   }
     return (
-        <div className="profile-container">
+        <div className="bg-amber-200 shadow-2xl rounded-2xl text-center text-purple-700 text-xl mt-10 font-bold p-3">
           <h2>Profile-Name:{profileData.name}</h2>
-          <img className="profile-img" src={profileData.avatar_url}/>
+          <img className="shadow-2xl w-[50%] rounded-[50%] mx-auto" src={profileData.avatar_url}/>
           <p>Profile:{profileData.bio}</p>
         </div>
     )
