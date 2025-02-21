@@ -42,27 +42,36 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="search-filter">
-        <div className="search">
+      <div className="p-2">
+        <div className="flex flex-wrap justify-center mt-3">
           <input
-            className="search-box"
+            className=" cursor-pointer border-orange-500 rounded-xs shadow-2xl p-2 font-bold drop-shadow-3xl"
             placeholder="Search..."
             type="text"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button className="search-btn" onClick={handleSearch}>
+          <button
+            className=" cursor-pointer text-white bg-orange-600 border-none rounded-b-xs rounded-t-xs p-1.5 ml-1 font-bold shadow-2xl"
+            onClick={handleSearch}
+          >
             Search
           </button>
-          <button className=" text-5xl" onClick={allSearch}>
+          <button
+            className="  cursor-pointer text-white bg-orange-600 border-none rounded-b-xs rounded-t-xs p-1.5 ml-2 font-bold shadow-2xl"
+            onClick={allSearch}
+          >
             All Restaurants
           </button>
         </div>
       </div>
-      <h2 className="" id="TopHeading">
+      <h2
+        className=" text-center text-2xl text-white bg-orange-600 mt-3 p-2 font-bold"
+        id="TopHeading"
+      >
         Top Restaurants
       </h2>
-      <div className="top-res">
+      <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
         {listOfRestaurants.map((restaurant) => {
           return (
             <Link
