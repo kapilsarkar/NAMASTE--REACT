@@ -33,7 +33,7 @@ const About = () => {
           </Link>
         )}
       </div>
-      <img className=" w-full" src={ABOUT_IMG} />
+      <img className="w-full" src={ABOUT_IMG} />
     </div>
   );
 };
