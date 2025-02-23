@@ -10,7 +10,7 @@ const TopRestaurant = (props) => {
       <h3 className="text-xl text-center mt-1.5 text-orange-600">{name}</h3>
       <p className=" text-green-600">{cuisines.join(", ")}</p>
       <p className="text-green-600 mt-1.5 flex flex-wrap ml-1 mr-1 gap-1 text-xl p-0.5">
-        <MdStarRate className=" text-white bg-green-700 rounded-[50%] mt-1 text-xl p-0.5" />
+        <MdStarRate className=" text-white bg-green-700 rounded-[50%] mt-1 text-xl p-0.5 animate-spin" />
         {`${avgRating}`}
       </p>
       <p className=" text-purple-600">{resData.info.sla.deliveryTime} mins</p>
