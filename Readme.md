@@ -250,6 +250,30 @@ Advanced optimization techniques including Custom Hooks.
 
 ---
 
+### 📚 EPISODE-10 (JO DIKHTA HAI VO BIKTA HAI) 📗 :
+---
+Introduction to Tailwind CSS for responsive UI designs..
+
+- 🧾 Topics Covered:
+ 
+   - Tailwind CSS introduction for UI design
+
+
+- 📒  JO DIKHTA HAI VO BIKTA HAI(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-10-JO%20DIKHTA%20HAI%20VO%20BIKTA%20HAI)
+
+- 💻 JO DIKHTA HAI VO BIKTA HAI(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-07-ASSIGNMENT)
+
+- 📔 ASSIGNMENT :
+
+    - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️   [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B10%2B-%2BJo%2Bdikhta%2Bhai%2Bvo%2Bbikta%2Bhai.pdf)
+
+    - 🔖 JO DIKHTA HAI VO BIKTA HAI(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-10-JO%20DIKHTA%20HAI%20VO%20BIKTA%20HAI)
+
+
+    - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://swiggyliveapikapil.netlify.app/)
+
+---
+
 
 
 
