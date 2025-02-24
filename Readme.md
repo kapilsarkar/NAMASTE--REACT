@@ -261,7 +261,7 @@ Introduction to Tailwind CSS for responsive UI designs..
 
 - 📒  JO DIKHTA HAI VO BIKTA HAI(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-10-JO%20DIKHTA%20HAI%20VO%20BIKTA%20HAI)
 
-- 💻 JO DIKHTA HAI VO BIKTA HAI(CODING) 📁 ➡️ [LINK](hhttps://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-10-JO%20DIKHTA%20HAI%20VO%20BIKTA%20HAI/Coding.md)
+- 💻 JO DIKHTA HAI VO BIKTA HAI(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-10-JO%20DIKHTA%20HAI%20VO%20BIKTA%20HAI/Coding.md)
 
 - 📔 ASSIGNMENT :
 
