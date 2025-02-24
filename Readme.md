@@ -267,10 +267,10 @@ Introduction to Tailwind CSS for responsive UI designs..
 
     - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️   [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B10%2B-%2BJo%2Bdikhta%2Bhai%2Bvo%2Bbikta%2Bhai.pdf)
 
-    - 🔖 JO DIKHTA HAI VO BIKTA HAI(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-10-JO%20DIKHTA%20HAI%20VO%20BIKTA%20HAI)
+    - 🔖 JO DIKHTA HAI VO BIKTA HAI(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-10-JO%20DIKHTA%20HAI%20VO%20BIKTA%20HAI/Coding.md)
 
 
-    - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://swiggyliveapikapil.netlify.app/)
+    - 🔖 LIVE LINK(ASSIGNMENT) ❄️  ➡️[LIVE LINK](https://preeminent-meerkat-3f57a7.netlify.app/)
 
 ---
 
