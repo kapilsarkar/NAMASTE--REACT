@@ -5,9 +5,9 @@ const TopRestaurant = (props) => {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, areaName } =
     resData?.info;
   return (
-    <div className=" cursor-pointer rounded-xl w-72 h-[32rem] p-3 font-bold  shadow-2xl">
+    <div className="cursor-pointer rounded-xl w-72 h-[32rem] p-3 font-bold  shadow-2xl">
       <img
-        className=" w-full h-[50%] p-1 shadow-2xl rounded-2xl animate-pulse"
+        className=" w-full h-[50%] p-1 shadow-2xl rounded-2xl"
         src={CDN_URL + cloudinaryImageId}
       />
       <h3 className="text-xl text-center mt-1.5 text-orange-600">{name}</h3>
@@ -22,16 +22,27 @@ const TopRestaurant = (props) => {
     </div>
   );
 };
-//Higher Order Component
-//input - RestaurantCard - Output- Promoted Restaurant.
-
-const withPromotedLabel = (TopRestaurant)=>{
-  return  ()=>{
+//Higher Order Component for Rstaurant Card with discount
+//Input - RestaurantCard
+// Output - RestaurantCard with discount offer if available else normal RestaurantCard
+export const withDiscountOffer = (TopRestaurant) => {
+  return (props) => {
+    const { resData } = props;
+    const { aggregatedDiscountInfoV3 } = resData?.info;
+    console.log(aggregatedDiscountInfoV3);
     return (
-      <div>
-        
+      <div className=" w-72 h-[32rem] bg-white rounded-[8px] shadow-2xl cursor-pointer overflow-hidden hover:scale-[0.98] relative">
+        {aggregatedDiscountInfoV3 && (
+          <div className="text-purple-500 bg-white p-2 text-center rounded-2xl text-sm font-bold absolute top-[41%] left-[10px]">
+            {`${aggregatedDiscountInfoV3.header} ${aggregatedDiscountInfoV3.subHeader}`}
+          </div>
+        )}
+        <label className="absolute bg-green-600 text-white rounded-lg m-1 p-2 font-semibold">
+          Discount Offer
+        </label>
+        <TopRestaurant {...props} />
       </div>
-    )
-  }
-}
+    );
+  };
+};
 export default TopRestaurant;

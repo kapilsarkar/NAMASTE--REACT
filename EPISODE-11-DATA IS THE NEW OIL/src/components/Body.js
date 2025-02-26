@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
-import TopRestaurant from "./TopRestaurant";
+import TopRestaurant, { withDiscountOffer } from "./TopRestaurant";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { RESTAURANT_URL } from "../utils/constant";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import TopRestaurant, { withDiscountOffer } from "./TopRestaurant";
+
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardWithDiscount = withDiscountOffer(TopRestaurant);
+
   console.log(listOfRestaurants);
   useEffect(() => {
     fetchData();
@@ -79,8 +84,13 @@ const Body = () => {
               key={restaurant.info.id}
               to={"/restaurants/" + restaurant.info.id}
             >
-              {" "}
-              <TopRestaurant resData={restaurant} />
+              {/* If the RestaurantCard has Discount Offer then show the Discount Offer  */}
+
+              {restaurant.info.aggregatedDiscountInfoV3 ? (
+                <RestaurantCardWithDiscount resData={restaurant} />
+              ) : (
+                <TopRestaurant resData={restaurant} />
+              )}
             </Link>
           );
         })}
