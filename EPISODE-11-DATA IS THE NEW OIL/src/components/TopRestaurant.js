@@ -22,14 +22,14 @@ const TopRestaurant = (props) => {
     </div>
   );
 };
-//Higher Order Component for Rstaurant Card with discount
+//Higher Order Component for Restaurant Card with discount
 //Input - RestaurantCard
 // Output - RestaurantCard with discount offer if available else normal RestaurantCard
 export const withDiscountOffer = (TopRestaurant) => {
   return (props) => {
     const { resData } = props;
     const { aggregatedDiscountInfoV3 } = resData?.info;
-    console.log(aggregatedDiscountInfoV3);
+    //console.log(aggregatedDiscountInfoV3);
     return (
       <div className=" w-72 h-[32rem] bg-white rounded-[8px] shadow-2xl cursor-pointer overflow-hidden hover:scale-[0.98] relative">
         {aggregatedDiscountInfoV3 && (
