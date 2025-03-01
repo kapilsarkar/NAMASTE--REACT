@@ -24,3 +24,5 @@ export const EACH_MENU_IMG =
 
 export const MENU_IMG =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
+
+export const ITEM_IMAGE = "FOOD_CATALOG/IMAGES/CMS/2024/4/19/c6fee2f9-e698-42f1-a4d0-570d475ad5ca_26e96bbb-1161-48cc-b7df-b72931e835fe.jpg"
