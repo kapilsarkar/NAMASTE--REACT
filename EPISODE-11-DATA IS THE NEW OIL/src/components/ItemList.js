@@ -3,7 +3,7 @@ import { CDN_URL } from "../utils/constant";
 const ItemList = ({ items }) => {
   console.log(items);
   return (
-    <div>
+    <div className="w-full">
       {items.map((item) => (
         <div
           key={item.card.info.id}
@@ -22,7 +22,7 @@ const ItemList = ({ items }) => {
               </span>
               <p>{item?.card?.info?.description}</p>
             </div>
-            <div className="w-3/12">
+            <div className="w-3/12 flex flex-col items-center justify-center">
               <img
                 className=" w-full p-2 shadow-2xl rounded-xl"
                 src={CDN_URL + item?.card?.info?.imageId}
