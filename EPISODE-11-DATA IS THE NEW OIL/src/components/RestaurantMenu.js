@@ -4,9 +4,12 @@ import { MdStarRate } from "react-icons/md";
 import { EACH_MENU_IMG, MENU_IMG } from "../utils/constant";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
+
+  const [showIndex, setShowIndex] = useState(null);
 
   if (resInfo === null) return <Shimmer />;
   const {
@@ -48,8 +51,18 @@ const RestaurantMenu = () => {
         </div>
       </div>
       {/* categories accordions */}
-      {categories.map((category) => {
-       return <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>;
+      {categories.map((category, index) => {
+        return (
+          //Controlled Component
+          <RestaurantCategory
+            key={category?.card?.card?.title}
+            data={category?.card?.card}
+            showItems={index === showIndex}
+            setShowIndex={() =>
+              setShowIndex(index === showIndex ? null : index)
+            }
+          />
+        );
       })}
     </div>
   );
