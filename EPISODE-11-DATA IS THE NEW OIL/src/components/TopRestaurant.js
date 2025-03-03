@@ -1,9 +1,11 @@
 import { CDN_URL } from "../utils/constant";
 import { MdStarRate } from "react-icons/md";
+
 const TopRestaurant = (props) => {
   const { resData } = props;
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, areaName } =
     resData?.info;
+
   return (
     <div className="cursor-pointer rounded-xl w-72 h-[32rem] p-3 font-bold  shadow-2xl">
       <img
