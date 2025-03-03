@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext.js";
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
+
+  const {loggedInUser} = useContext(UserContext);
+   console.log(loggedInUser)
   return (
     <div className="w-full flex justify-evenly items-center shadow-2xl">
       <div className="p-3 flex text-2xl font-bold">
@@ -31,6 +35,9 @@ const Header = () => {
             </li>
             <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
             <i className="fa-solid fa-cart-shopping"></i>
+            </li>
+            <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
+             {loggedInUser}
             </li>
             <button
               className=" cursor-pointer bg-orange-600 text-white px-1.5 py-1 rounded-b-xl rounded-t-sm"
