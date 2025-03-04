@@ -8,7 +8,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const { loggedInUser } = useContext(UserContext);
-  console.log(loggedInUser);
+  //console.log(loggedInUser);
   return (
     <div className="w-full flex justify-evenly items-center shadow-2xl">
       <div className="p-3 flex text-2xl font-bold">

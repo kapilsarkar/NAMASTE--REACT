@@ -62,7 +62,8 @@ const RestaurantMenu = () => {
             showItems={index === showIndex}
             setShowIndex={() =>
               setShowIndex(index === showIndex ? null : index)
-            } dummy= {dummy}
+            }
+            dummy={dummy}
           />
         );
       })}

@@ -32,7 +32,7 @@ const Body = () => {
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(json);
+    //console.log(json);
   };
 
   const onlineStatus = useOnlineStatus();
