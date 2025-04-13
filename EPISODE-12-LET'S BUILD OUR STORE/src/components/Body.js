@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useRestaurantData from "../hooks/useRestaurantData";
 import RestaurantCard from "./RestaurantCard";
-
+import Shimmer from "../components/Shimmer";
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant, fetchData] =
     useRestaurantData();
@@ -19,11 +19,13 @@ const Body = () => {
   };
   const handleTopRated = () => {
     const topRated = listOfRestaurant.filter(
-      (res) => res.info.avgRating >= 4.7
+      (res) => res.info.avgRating >= 4.5
     );
     setListOfRestaurant(topRated);
   };
-  return (
+  return listOfRestaurant.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="w-full">
       <div className="flex flex-wrap justify-evenly mt-3 p-2">
         <div className="flex flex-wrap gap-1.5">
