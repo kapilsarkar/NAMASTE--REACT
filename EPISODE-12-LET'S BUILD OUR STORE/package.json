@@ -10,6 +10,7 @@
   "author": "kapil",
   "license": "ISC",
   "dependencies": {
+    "@remix-run/router": "^1.23.0",
     "@tailwindcss/postcss": "^4.1.3",
     "browserslist": "^4.24.4",
     "react": "^19.1.0",
@@ -19,6 +20,7 @@
     "tailwindcss": "^4.1.3"
   },
   "devDependencies": {
-    "parcel": "^2.14.4"
+    "parcel": "^2.14.4",
+    "process": "^0.11.10"
   }
 }
