@@ -16,13 +16,13 @@ const Header = () => {
         <div className="flex justify-center text-sm font-bold">
           <ul className="flex gap-2 justify-between p-2 cursor-pointer">
             <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
-              Home
+              <Link to="/">Home</Link>
             </li>
             <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
-             <Link to="/about">About</Link> 
+              <Link to="/about">About</Link>
             </li>
             <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
-              Contact
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
               <i className="fa-solid fa-cart-shopping"></i>
