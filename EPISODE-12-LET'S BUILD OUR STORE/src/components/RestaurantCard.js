@@ -25,4 +25,28 @@ const RestaurantCard = (props) => {
   );
 };
 
+//Higher Order Component for Restaurant Card with discount
+//Input - RestaurantCard
+// Output - RestaurantCard with discount offer if available else normal RestaurantCard
+
+export const withDiscountOffer = (RestaurantCard) => {
+  return (props) => {
+    const { resData } = props;
+    const { aggregatedDiscountInfoV3 } = resData?.info;
+    return (
+      <div className=" w-72 h-[32rem] bg-white rounded-[8px] shadow-2xl cursor-pointer overflow-hidden hover:scale-[0.98] relative">
+        {aggregatedDiscountInfoV3 && (
+          <div className="text-purple-500 bg-white p-2 text-center rounded-2xl text-sm font-bold absolute top-[41%] left-[10px]">
+            {`${aggregatedDiscountInfoV3.header} ${aggregatedDiscountInfoV3.subHeader}`}
+          </div>
+        )}
+        <label className="absolute bg-green-600 text-white rounded-lg m-1 p-2 font-semibold">
+          Discount Offer
+        </label>
+        <RestaurantCard {...props}/>
+      </div>
+    );
+  };
+};
+
 export default RestaurantCard;

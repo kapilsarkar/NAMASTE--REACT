@@ -1,11 +1,15 @@
 import { useState } from "react";
 import useRestaurantData from "../hooks/useRestaurantData";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withDiscountOffer } from "./RestaurantCard";
 import Shimmer from "../components/Shimmer";
+import { Link } from "react-router-dom";
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant, fetchData] =
     useRestaurantData();
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardWithDiscount = withDiscountOffer(RestaurantCard);
+
   const handleSearch = () => {
     const filteredData = listOfRestaurant.filter((res) => {
       return res.info.name.toLowerCase().includes(searchText.toLowerCase());
@@ -63,7 +67,17 @@ const Body = () => {
       <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
         {listOfRestaurant.map((restaurant) => {
           return (
-            <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+            <Link>
+              {/* If the RestaurantCard has Discount Offer then show the Discount Offer  */}
+              {restaurant.info.aggregatedDiscountInfoV3 ? (
+                <RestaurantCardWithDiscount resData={restaurant} />
+              ) : (
+                <RestaurantCard
+                  key={restaurant?.info?.id}
+                  resData={restaurant}
+                />
+              )}
+            </Link>
           );
         })}
       </div>
