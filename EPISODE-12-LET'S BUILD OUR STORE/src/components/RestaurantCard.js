@@ -43,7 +43,7 @@ export const withDiscountOffer = (RestaurantCard) => {
         <label className="absolute bg-green-600 text-white rounded-lg m-1 p-2 font-semibold">
           Discount Offer
         </label>
-        <RestaurantCard {...props}/>
+        <RestaurantCard {...props} />
       </div>
     );
   };

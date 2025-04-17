@@ -62,8 +62,8 @@ const Body = () => {
         </div>
       </div>
 
-      <h2 className="text-center text-xl text-white bg-orange-600 mt-3 p-2 font-bold">
-        Top Restaurants
+      <h2 className=" animate-pulse text-2xl text-black mt-3 p-2 font-bold">
+        Top Restaurant Chains in Noida 1
       </h2>
       <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
         {listOfRestaurant.map((restaurant) => {
@@ -82,7 +82,10 @@ const Body = () => {
           );
         })}
       </div>
+      <div className="">
       <RestaurantsOnline />
+      </div>
+      
     </div>
   );
 };

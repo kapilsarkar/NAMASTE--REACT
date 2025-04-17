@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { RESTAURANT_URL } from "../utils/constant";
 import TopRestaurantCard from "./TopRestaurantCard";
+import Shimmer from "./Shimmer";
 
 const RestaurantsOnline = () => {
   const [listOnlineRes, setOnlineRes] = useState([]);
@@ -19,12 +20,14 @@ const RestaurantsOnline = () => {
       json?.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  return (
+  return listOnlineRes.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="w-full">
-      <h2 className="text-center text-xl text-white bg-orange-600 mt-3 p-2 font-bold">
-        Restaurants with Online Food Delivery
+      <h2 className="animate-pulse text-2xl text-black mt-3 p-2 font-bold">
+        Restaurants with Online Food Delivery in Noida-1
       </h2>
-      <div lassName="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
+      <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
         {listOnlineRes.map((restaurant) => {
           return (
             <TopRestaurantCard
