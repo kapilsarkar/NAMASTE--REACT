@@ -3,6 +3,7 @@ import useRestaurantData from "../hooks/useRestaurantData";
 import RestaurantCard, { withDiscountOffer } from "./RestaurantCard";
 import Shimmer from "../components/Shimmer";
 import { Link } from "react-router-dom";
+import RestaurantsOnline from "./RestaurantsOnline";
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant, fetchData] =
     useRestaurantData();
@@ -61,13 +62,13 @@ const Body = () => {
         </div>
       </div>
 
-      <h2 className="text-center text-2xl text-white bg-orange-600 mt-3 p-2 font-bold">
+      <h2 className="text-center text-xl text-white bg-orange-600 mt-3 p-2 font-bold">
         Top Restaurants
       </h2>
       <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
         {listOfRestaurant.map((restaurant) => {
           return (
-            <Link>
+            <Link key={restaurant?.info?.id}>
               {/* If the RestaurantCard has Discount Offer then show the Discount Offer  */}
               {restaurant.info.aggregatedDiscountInfoV3 ? (
                 <RestaurantCardWithDiscount resData={restaurant} />
@@ -81,6 +82,7 @@ const Body = () => {
           );
         })}
       </div>
+      <RestaurantsOnline />
     </div>
   );
 };
