@@ -47,24 +47,27 @@ const Body = () => {
           >
             Search
           </button>
-          <button
-            className="cursor-pointer text-white bg-orange-600 border-none rounded-b-xs rounded-t-xs p-1.5 ml-2 font-bold shadow-2xl"
-            onClick={allSearch}
-          >
-            All Restaurants
-          </button>
-          <button
-            className="cursor-pointer text-white bg-orange-600 border-none rounded-b-xs rounded-t-xs p-1.5 ml-2 font-bold shadow-2xl"
-            onClick={handleTopRated}
-          >
-            Top Rated
-          </button>
+
         </div>
       </div>
 
       <h2 className="animate-pulse  text-2xl text-black mt-3 p-3 font-extrabold">
-        Top Restaurant Chains in Noida 1
+        Top Restaurant Chains in Kolkata
       </h2>
+      <div className="flex flex-wrap p-2  gap-2 justify-center">
+        <button
+          className="font-extrabold rounded-2xl p-1.5 border-t-2 text-shadow-fuchsia-500 border-b-2 shadow-2xl cursor-pointer"
+          onClick={allSearch}
+        >
+          All Restaurants
+        </button>
+        <button
+          className="font-extrabold rounded-2xl p-1.5 border-t-2 text-shadow-fuchsia-500 border-b-2 shadow-2xl cursor-pointer"
+          onClick={handleTopRated}
+        >
+          Top Rated
+        </button>
+      </div>
       <div className="flex flex-wrap justify-center gap-1 mt-2 w-auto">
         {listOfRestaurant.map((restaurant) => {
           return (
