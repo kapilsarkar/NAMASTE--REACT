@@ -32,8 +32,8 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="w-full">
-      <div className="flex flex-wrap justify-evenly mt-3 p-2">
-        <div className="flex flex-wrap gap-1.5">
+      <div className="flex flex-wrap justify-evenly mt-3 p-2 border-b-orange-500">
+        <div className="flex flex-wrap gap-1.5 shadow-2xl">
           <input
             type="text"
             className="cursor-pointer border-orange-500 rounded-xs shadow-2xl p-2 font-bold drop-shadow-3xl"
@@ -62,10 +62,10 @@ const Body = () => {
         </div>
       </div>
 
-      <h2 className=" animate-pulse text-2xl text-black mt-3 p-2 font-bold">
+      <h2 className="animate-pulse text-xl text-black mt-3 p-1 font-bold">
         Top Restaurant Chains in Noida 1
       </h2>
-      <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
+      <div className="flex flex-wrap justify-center gap-1 mt-2 w-auto">
         {listOfRestaurant.map((restaurant) => {
           return (
             <Link key={restaurant?.info?.id}>
@@ -83,9 +83,8 @@ const Body = () => {
         })}
       </div>
       <div className="">
-      <RestaurantsOnline />
+        <RestaurantsOnline />
       </div>
-      
     </div>
   );
 };

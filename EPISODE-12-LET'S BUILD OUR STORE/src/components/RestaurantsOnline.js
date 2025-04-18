@@ -27,7 +27,7 @@ const RestaurantsOnline = () => {
       <h2 className="animate-pulse text-2xl text-black mt-3 p-2 font-bold">
         Restaurants with Online Food Delivery in Noida-1
       </h2>
-      <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-auto">
+      <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-full">
         {listOnlineRes.map((restaurant) => {
           return (
             <TopRestaurantCard
