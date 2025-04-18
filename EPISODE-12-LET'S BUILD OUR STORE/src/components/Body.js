@@ -62,7 +62,7 @@ const Body = () => {
         </div>
       </div>
 
-      <h2 className="animate-pulse text-xl text-black mt-3 p-1 font-bold">
+      <h2 className="animate-pulse  text-2xl text-black mt-3 p-3 font-extrabold">
         Top Restaurant Chains in Noida 1
       </h2>
       <div className="flex flex-wrap justify-center gap-1 mt-2 w-auto">
