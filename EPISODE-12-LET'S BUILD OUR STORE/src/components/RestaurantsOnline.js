@@ -5,15 +5,17 @@ import useRestaurantOnline from "../hooks/useRestaurantOnline";
 
 const RestaurantsOnline = () => {
   const [listOnlineRes, setOnlineRes, fetchData] = useRestaurantOnline();
+
   const handleTopRes = () => {
     const topRes = listOnlineRes.filter((res) => res.info.avgRating >= 4.5);
-    setOnlineRes(topRes);
+    topRes.length <= 1 ? fetchData() : setOnlineRes(topRes);
   };
 
   const handleFastDeliver = () => {
-    const lessTime = listOnlineRes.filter((res) => res.info.sla.deliveryTime <= 30)
-    setOnlineRes(lessTime);
-  }
+    const lessTime = listOnlineRes.filter((res) => res.info.sla.deliveryTime <= 30);
+    lessTime.length <= 1 ? fetchData() : setOnlineRes(lessTime);
+  };
+
   const allSearch = () => {
     fetchData();
   };
@@ -21,8 +23,8 @@ const RestaurantsOnline = () => {
     <Shimmer />
   ) : (
     <div className="w-full">
-      <div className="animate-pulse  text-2xl text-black mt-3 p-3 font-extrabold">
-        Restaurants with Online Food Delivery in Kolkata
+      <div className="animate-pulse  text-5xl text-center text-black mt-3 p-3 font-extrabold">
+      <span className="text-orange-600">Restaurant</span> With Online Food Delivery in <span className="text-green-600">Kolkata</span>
       </div>
       <div className=" flex flex-wrap p-2 mt-2 gap-2 justify-center">
         <button

@@ -5,7 +5,8 @@ import Shimmer from "../components/Shimmer";
 import { Link } from "react-router-dom";
 import RestaurantsOnline from "./RestaurantsOnline";
 const Body = () => {
-  const [listOfRestaurant, setListOfRestaurant, fetchData] =
+  const [listOfRestaurant, setListOfRestaurant, fetchData, masterList,
+    setMasterList] =
     useRestaurantData();
   const [searchText, setSearchText] = useState("");
 
@@ -15,19 +16,30 @@ const Body = () => {
     const filteredData = listOfRestaurant.filter((res) => {
       return res.info.name.toLowerCase().includes(searchText.toLowerCase());
     });
-    setListOfRestaurant(filteredData);
-    setSearchText("");
+    if (filteredData.length === 0) {
+      alert("Please Enter Correct Data");
+      setSearchText("");
+    }
+    else {
+      setListOfRestaurant(filteredData);
+      setSearchText("");
+    }
   };
   const allSearch = () => {
     fetchData();
     setSearchText("");
   };
   const handleTopRated = () => {
-    const topRated = listOfRestaurant.filter(
+    const topRated = masterList.filter(
       (res) => res.info.avgRating >= 4.5
     );
-    setListOfRestaurant(topRated);
+
+    topRated.length <= 1 ? fetchData() : setListOfRestaurant(topRated);
   };
+  const handleFastDelivery = () => {
+    const lessTime = masterList.filter((res) => res.info.sla.deliveryTime <= 30)
+    lessTime.length <= 1 ? fetchData() : setListOfRestaurant(lessTime)
+  }
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
@@ -51,8 +63,8 @@ const Body = () => {
         </div>
       </div>
 
-      <h2 className="animate-pulse  text-2xl text-black mt-3 p-3 font-extrabold">
-        Top Restaurant Chains in Kolkata
+      <h2 className="animate-pulse text-5xl sm:text-7xl text-center text-black mt-3 p-3 font-extrabold">
+        Top <span className="text-orange-600">Restaurant</span> Chains in <span className="text-green-600">Kolkata</span>
       </h2>
       <div className="flex flex-wrap p-2  gap-2 justify-center">
         <button
@@ -67,8 +79,9 @@ const Body = () => {
         >
           Top Rated
         </button>
+        <button className="font-extrabold rounded-2xl p-1.5 border-t-2 text-shadow-fuchsia-500 border-b-2 shadow-2xl cursor-pointer" onClick={handleFastDelivery}>Fast Delivery</button>
       </div>
-      <div className="flex flex-wrap justify-center gap-1 mt-2 w-auto">
+      <div className="flex flex-wrap justify-center gap-1 mt-2 w-full">
         {listOfRestaurant.map((restaurant) => {
           return (
             <Link key={restaurant?.info?.id}>
