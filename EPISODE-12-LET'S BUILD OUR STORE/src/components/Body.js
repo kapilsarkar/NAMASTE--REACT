@@ -84,7 +84,7 @@ const Body = () => {
       <div className="flex flex-wrap justify-center gap-1 mt-2 w-full">
         {listOfRestaurant.map((restaurant) => {
           return (
-            <Link key={restaurant?.info?.id}>
+            <Link key={restaurant?.info?.id} to={"/restaurants/" + restaurant.info.id}>
               {/* If the RestaurantCard has Discount Offer then show the Discount Offer  */}
               {restaurant.info.aggregatedDiscountInfoV3 ? (
                 <RestaurantCardWithDiscount resData={restaurant} />
