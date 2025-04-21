@@ -3,6 +3,7 @@ import useRestaurantMenu from "../hooks/useRestaurantMenu";
 import { MENU_IMG, EACH_MENU_IMG } from "../utils/constant";
 import Shimmer from "../components/Shimmer";
 import { MdStarRate } from "react-icons/md";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
     const { resId } = useParams();
@@ -13,6 +14,10 @@ const RestaurantMenu = () => {
         costForTwoMessage,
         avgRating,
         cloudinaryImageId } = resInfo?.cards[2]?.card?.card?.info
+
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+    console.log(categories)
+
     return (
         <div className="w-full mt-2">
             <div className="text-white bg-orange-600 flex flex-wrap justify-center items-center min-h-48 font-bold p-3">
@@ -29,6 +34,12 @@ const RestaurantMenu = () => {
                     <p>{costForTwoMessage}</p>
                 </div>
             </div>
+            {/* categories accordian */}
+            {categories.map((category) => {
+                return (
+                    <RestaurantCategory key={category?.card?.card?.title} />
+                )
+            })}
         </div>
     )
 }
