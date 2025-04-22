@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
         cloudinaryImageId } = resInfo?.cards[2]?.card?.card?.info
 
     const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-    console.log(categories)
+    //console.log(categories)
 
     return (
         <div className="w-full mt-2">
@@ -37,7 +37,7 @@ const RestaurantMenu = () => {
             {/* categories accordian */}
             {categories.map((category) => {
                 return (
-                    <RestaurantCategory key={category?.card?.card?.title} />
+                    <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card} />
                 )
             })}
         </div>
