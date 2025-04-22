@@ -98,7 +98,7 @@ const Body = () => {
           );
         })}
       </div>
-      <div className="">
+      <div className="w-full">
         <RestaurantsOnline />
       </div>
     </div>
