@@ -2,19 +2,21 @@ import { useParams } from "react-router-dom";
 import useRestaurantMenuOnline from "../hooks/useRestaurantMenuOnline";
 import { EACH_MENU_IMG, MENU_IMG, MENU_IMG_ONLINE } from "../utils/constant";
 import { MdStarRate } from "react-icons/md";
+import RestaurantOnlineCategory from "./RestaurantOnlineCategory";
 const RestaurantOnlineMenu = () => {
     const { resId } = useParams();
     const resInfo = useRestaurantMenuOnline(resId);
 
-    console.log(resId);
-    console.log(resInfo);
+    //console.log(resId);
+    //console.log(resInfo);
 
     // Check if resInfo and cards are available
-    const { name, cuisines, cloudinaryImageId, city, avgRating,costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info || {}
+    const { name, cuisines, cloudinaryImageId, city, avgRating, costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info || {}
 
-    if (!resInfo) {
-        return <div>Loading...</div>;
-    }
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+     
+    if (!resInfo || !resInfo.cards) return <div>Loading...</div>;
+    //console.log(categories);
 
     return (
         <div className="w-full mt-2">
@@ -27,12 +29,17 @@ const RestaurantOnlineMenu = () => {
                         {avgRating} |{" "}
                         {resInfo?.cards[2]?.card?.card?.info?.sla?.deliveryTime}mins
                     </p>
-                    <p className=" font-bold text-lg">{cuisines.join(",")}</p>
+                    <p className=" font-bold text-lg">{cuisines?.join(",")}</p>
                     <p>{city}</p>
                     <p>{costForTwoMessage}</p>
                 </div>
             </div>
-
+            {/* {categories accordions} */}
+            {categories.map((category) => {
+                return (
+                    <RestaurantOnlineCategory key={category?.card?.card?.title} data={category?.card?.card} />
+                )
+            })}
         </div>
     );
 };

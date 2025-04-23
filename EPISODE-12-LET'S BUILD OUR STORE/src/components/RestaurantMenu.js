@@ -29,7 +29,7 @@ const RestaurantMenu = () => {
                         {avgRating} |{" "}
                         {resInfo?.cards[2]?.card?.card?.info?.sla?.deliveryTime}mins
                     </p>
-                    <p className=" font-bold text-lg">{cuisines.join(",")}</p>
+                    <p className=" font-bold text-lg">{cuisines?.join(",")}</p>
                     <p>{city}</p>
                     <p>{costForTwoMessage}</p>
                 </div>
