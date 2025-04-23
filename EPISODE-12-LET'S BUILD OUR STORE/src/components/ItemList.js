@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constant";
 const ItemList = ({ items }) => {
-    console.log(items)
+    //console.log(items)
     return (
         <div className="w-full">
             {items.map((item) => (

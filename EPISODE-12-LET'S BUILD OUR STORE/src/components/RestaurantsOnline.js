@@ -1,7 +1,7 @@
 import TopRestaurantCard from "./TopRestaurantCard";
 import Shimmer from "./Shimmer";
 import useRestaurantOnline from "../hooks/useRestaurantOnline";
-
+import { Link } from "react-router-dom";
 
 const RestaurantsOnline = () => {
   const [listOnlineRes, setOnlineRes, fetchData] = useRestaurantOnline();
@@ -24,7 +24,7 @@ const RestaurantsOnline = () => {
   ) : (
     <div className="w-full">
       <div className="animate-pulse  text-5xl text-center text-black mt-3 p-3 font-extrabold">
-      <span className="text-orange-600">Restaurant</span> With Online Food Delivery in <span className="text-green-600">Kolkata</span>
+        <span className="text-orange-600">Restaurant</span> With Online Food Delivery in <span className="text-green-600">Kolkata</span>
       </div>
       <div className=" flex flex-wrap p-2 mt-2 gap-2 justify-center">
         <button
@@ -44,10 +44,13 @@ const RestaurantsOnline = () => {
       <div className="flex flex-wrap justify-center gap-1.5 mt-2 w-full">
         {listOnlineRes.map((restaurant) => {
           return (
-            <TopRestaurantCard
-              key={restaurant?.info?.id}
-              resData={restaurant}
-            />
+            <Link key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id}>
+              <TopRestaurantCard
+
+                resData={restaurant}
+              />
+            </Link>
+
           );
         })}
       </div>

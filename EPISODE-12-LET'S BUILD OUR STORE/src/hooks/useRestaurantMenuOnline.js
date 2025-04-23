@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
 import { MENU_API_ONLINE } from "../utils/constant";
-
-
-const useRestaurantMenuOnline = () => {
-    const [resInfo, setResInfo] = useState(null)
-
+const useRestaurantMenuOnline = (resId) => {
+    const [resInfo, setResInfo] = useState(null);
     useEffect(() => {
         fetchData();
     }, [])
     const fetchData = async () => {
         try {
-            const data = await fetch(MENU_API_ONLINE);
+            const data = await fetch(MENU_API_ONLINE + resId);
             const json = await data.json();
-            console.log(json.data);
-            setResInfo(json.data);
+            setResInfo(json.data)
+            console.log(json.data)
         }
         catch (err) {
             console.error("Error While Fetching Data", err);
