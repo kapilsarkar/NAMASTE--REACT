@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../hooks/useOnlineStatus";
+import UserContext from "../utils/userContext";
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
+  const {loggedInUser} = useContext(UserContext);
+  
   return (
     <div className="w-full flex justify-evenly items-center shadow-2xl">
       <div className="p-3 flex text-2xl font-bold">
@@ -13,6 +16,9 @@ const Header = () => {
           Food <span className=" text-green-700">App</span>
         </h3>
       </div>
+      <p className=" font-bold text-center text-sm text-green-600">
+       {loggedInUser}
+      </p>
       <div className="hidden md:block">
         <div className="flex justify-center text-sm font-bold">
           <ul className="flex gap-2 justify-between p-2 cursor-pointer">

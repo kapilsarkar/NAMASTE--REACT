@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,13 +10,27 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import RestaurantOnlineMenu from "./components/RestaurantOnlineMenu";
 import Error from "./components/Error";
+import UserContext from "./utils/userContext";
+
 const AppLayout = () => {
+  //Authentication
+  const [userName, setUserName] = useState();
+  useEffect(() => {
+    const data = {
+      name: "Kapil Sarkar",
+    };
+    setUserName(data.name);
+  }, [])
+
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userName,setUserName }}>
+      <div className="app">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
+    </UserContext.Provider>
+
   );
 };
 
@@ -24,7 +38,6 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -50,8 +63,8 @@ const appRouter = createBrowserRouter([
         element: <RestaurantMenu />,
       },
       {
-        path:"/restaurant/:resId",
-        element :<RestaurantOnlineMenu/>,
+        path: "/restaurant/:resId",
+        element: <RestaurantOnlineMenu />,
       },
     ],
     errorElement: <Error />,
