@@ -11,6 +11,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import RestaurantOnlineMenu from "./components/RestaurantOnlineMenu";
 import Error from "./components/Error";
 import UserContext from "./utils/userContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const AppLayout = () => {
   //Authentication
@@ -23,14 +25,15 @@ const AppLayout = () => {
   }, [])
 
   return (
-    <UserContext.Provider value={{ loggedInUser: userName,setUserName }}>
-      <div className="app">
-        <Header />
-        <Outlet />
-        <Footer />
-      </div>
-    </UserContext.Provider>
-
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+          <Footer />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
