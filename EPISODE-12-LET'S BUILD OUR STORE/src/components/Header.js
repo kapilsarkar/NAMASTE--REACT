@@ -1,13 +1,17 @@
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 import UserContext from "../utils/userContext";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
-  const {loggedInUser} = useContext(UserContext);
-  
+  const { loggedInUser } = useContext(UserContext);
+
+  //Subscribing to the store using the Selector 
+  const cartItems = useSelector((store) => store.cart.items)
+  console.log(cartItems);
   return (
     <div className="w-full flex justify-evenly items-center shadow-2xl">
       <div className="p-3 flex text-2xl font-bold">
@@ -17,7 +21,7 @@ const Header = () => {
         </h3>
       </div>
       <p className=" font-bold text-center text-sm text-green-600">
-       {loggedInUser}
+        {loggedInUser}
       </p>
       <div className="hidden md:block">
         <div className="flex justify-center text-sm font-bold">
@@ -35,7 +39,7 @@ const Header = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
-              <i className="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-cart-shopping"> ( {cartItems.length} )</i>
             </li>
             <button
               className=" cursor-pointer bg-orange-600 text-white px-1.5 py-1 rounded-b-xl rounded-t-sm"

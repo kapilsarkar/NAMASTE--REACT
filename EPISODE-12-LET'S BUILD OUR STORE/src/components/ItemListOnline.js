@@ -25,7 +25,7 @@ const ItemListOnline = ({ items }) => {
                                     className=" w-56 p-2 shadow-2xl rounded-xl"
                                     src={CDN_URL + item?.card?.info?.imageId}
                                 />
-                                <button className="px-5 py-2 text-xs font-bold text-center bg-white mx-5 rounded-xl text-green-500 shadow-2xl">
+                                <button className="px-5 py-2 text-xs font-bold text-center bg-white mx-5 rounded-xl text-green-500 shadow-2xl cursor-pointer">
                                     ADD +
                                 </button>
                             </div>
