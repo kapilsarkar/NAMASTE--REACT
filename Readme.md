@@ -325,13 +325,13 @@ Implementing Redux toolkit for state management.
 
   - 📒 LET'S BUILD OUR STORE(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-12-LET'S%20BUILD%20OUR%20STORE)
 
-- 💻 LET'S BUILD OUR STORE(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-11-DATA%20IS%20THE%20NEW%20OIL/Coding.md)
+- 💻 LET'S BUILD OUR STORE(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-12-LET'S%20BUILD%20OUR%20STORE/Coding.md)
 
 - 📔 ASSIGNMENT :
 
   - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B12%2B-%2BLet's%2BBuild%2Bour%2BStore.pdf)
 
-  - 🔖 LET'S BUILD OUR STORE(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-11-DATA%20IS%20THE%20NEW%20OIL/Coding.md)
+  - 🔖 LET'S BUILD OUR STORE(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-12-LET'S%20BUILD%20OUR%20STORE/Coding.md)
 
   - 🔖 LIVE LINK(ASSIGNMENT) ❄️ ➡️[LIVE LINK](https://letsbuildourstore.netlify.app/)
 
