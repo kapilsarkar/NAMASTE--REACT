@@ -11,7 +11,7 @@ const Header = () => {
 
   //Subscribing to the store using the Selector 
   const cartItems = useSelector((store) => store.cart.items)
-  console.log(cartItems);
+  //console.log(cartItems);
   return (
     <div className="w-full flex justify-evenly items-center shadow-2xl">
       <div className="p-3 flex text-2xl font-bold">
