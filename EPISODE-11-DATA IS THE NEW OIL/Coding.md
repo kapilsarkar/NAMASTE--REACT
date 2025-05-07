@@ -4,7 +4,7 @@
 
 - Handling data flow and DevTools exploration.
 
-[LIVE LINK](https://calm-chimera-3b2b86.netlify.app/)
+[LIVE LINK](https://letsbuildourstore.netlify.app/)
 
 ![IMG](./1.png)
 
