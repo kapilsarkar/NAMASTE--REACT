@@ -1,0 +1,28 @@
+{
+  "name": "lets-build-our-store",
+  "version": "1.0.0",
+  "description": "namste-react-episode-12",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "kapil",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.7.0",
+    "@remix-run/router": "^1.23.0",
+    "@tailwindcss/postcss": "^4.1.3",
+    "browserslist": "^4.24.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.5.0",
+    "tailwindcss": "^4.1.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.4",
+    "process": "^0.11.10"
+  }
+}
