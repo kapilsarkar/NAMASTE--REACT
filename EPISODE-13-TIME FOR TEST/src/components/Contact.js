@@ -23,15 +23,15 @@ const Contact = () => {
           />
           <input
             className="w-full m-3 p-2 shadow-2xl border-2 box-border"
-            type="email"
+            type="text"
             placeholder="Email"
             required
           />
-          <textarea
+          {/* <textarea
             className="w-full m-3 p-2 shadow-2xl border-2 box-border"
             placeholder="Type Your Message here..."
             required
-          ></textarea>
+          ></textarea> */}
           <button
             className="cursor-pointer text-white bg-orange-600 border-none rounded-b-xs rounded-t-xs p-1.5 ml-2 font-bold shadow-2xl"
             type="submit"

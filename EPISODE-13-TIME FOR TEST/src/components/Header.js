@@ -39,7 +39,7 @@ const Header = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
-              <Link to="/cart"><i className="fa-solid fa-cart-shopping"> ( {cartItems.length} )</i></Link>
+              <Link to="/cart">Cart -<i className="fa-solid fa-cart-shopping"> ( {cartItems.length}  )</i></Link>
             </li>
             <button
               className=" cursor-pointer bg-orange-600 text-white px-1.5 py-1 rounded-b-xl rounded-t-sm"
