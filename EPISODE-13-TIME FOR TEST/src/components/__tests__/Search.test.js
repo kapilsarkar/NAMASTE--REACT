@@ -1,4 +1,4 @@
-import { fireEvent, render ,screen} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Body from "../Body";
 import { json } from "react-router";
 import MOCK_DATA from "../mocks/mockResListData.json";
@@ -13,7 +13,7 @@ global.fetch = jest.fn(() => {
         }
     })
 })
-it("Should render the Body Component with search button", async () => {
+it("Should Search Res-List for Burger Text Input", async () => {
 
     await act(async () => render(
         <BrowserRouter>
@@ -21,16 +21,26 @@ it("Should render the Body Component with search button", async () => {
         </BrowserRouter>
 
     )
-)
- const searchBtn = screen.getByRole("button",{name:"Search"});
+    )
+    const cardsBeforeSearch = screen.getAllByTestId('resCard')
+    expect(cardsBeforeSearch.length).toBe(20)
 
- const searchInput  = screen.getByTestId("searchInput");
- 
- fireEvent.change(searchInput,{target:{value:"burger"}});
+    const searchBtn = screen.getByRole("button", { name: "Search" });
 
- fireEvent.click(searchBtn)
+    const searchInput = screen.getByTestId("searchInput");
 
- //console.log(searchBtn);
-  
- expect(searchBtn).toBeInTheDocument();
+    fireEvent.change(searchInput, { target: { value: "burger" } });
+
+    fireEvent.click(searchBtn)
+
+
+
+    //console.log(searchBtn);
+
+
+
+    const cardsAfterSearch = screen.getAllByTestId('resCard');
+
+
+    expect(cardsAfterSearch.length).toBe(1);
 });
