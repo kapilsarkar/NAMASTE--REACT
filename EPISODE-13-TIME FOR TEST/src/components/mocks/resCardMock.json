@@ -1,0 +1,99 @@
+{
+    "info": {
+        "id": "396874",
+        "name": "Wow! Momo",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/21/18367aa1-e0ba-4d67-9177-a7dc5823d43a_396874.jpg",
+        "locality": "Raja Scmullick Road",
+        "areaName": "Jadavpur",
+        "costForTwo": "₹300 for two",
+        "cuisines": [
+            "Momos",
+            "Chinese",
+            "fastfood",
+            "Asian",
+            "Beverages"
+        ],
+        "avgRating": 4.5,
+        "parentId": "1776",
+        "avgRatingString": "4.5",
+        "totalRatingsString": "4.7K+",
+        "sla": {
+            "deliveryTime": 29,
+            "lastMileTravel": 1.3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "1.3 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2025-05-31 05:00:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "bolt/big%20rx%20listing%2015%20mins%20.png",
+                    "description": "bolt!"
+                },
+                {
+                    "imageId": "Rxawards/_CATEGORY-Chinese.png",
+                    "description": "Delivery!"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "bolt!",
+                                "imageId": "bolt/big%20rx%20listing%2015%20mins%20.png"
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "description": "Delivery!",
+                                "imageId": "Rxawards/_CATEGORY-Chinese.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "ITEMS",
+            "subHeader": "AT ₹99"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "4.0",
+                "ratingCount": "576"
+            },
+            "source": "GOOGLE",
+            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-d3684bba-fa8b-4794-9242-50a6b72a1d76"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/kolkata/wow-momo-raja-scmullick-road-jadavpur-rest396874",
+        "type": "WEBLINK"
+    }
+}

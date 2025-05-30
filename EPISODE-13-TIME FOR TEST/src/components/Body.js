@@ -61,6 +61,7 @@ const Body = () => {
         <div className="flex flex-wrap gap-1.5 shadow-2xl">
           <input
             type="text"
+            data-testid = "searchInput"
             className="cursor-pointer border-orange-500 rounded-xs shadow-2xl p-2 font-bold drop-shadow-3xl"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
