@@ -11,7 +11,10 @@ Namaste React Course from Zero to Hero 🚀 by Akshay Saini(Founder of NamasteDe
 
 ### Created a Food-App 🍉 🍉 from scratch using React and Tailwind CSS 🚀
 
-  [LIVE LINK](https://foodappkolkata.netlify.app/)
+  ❄️ ➡️[LIVE LINK](https://foodappkolkata.netlify.app/)
+
+  📁 ➡️[FOLDER LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/FOOD-APP)
+
 
  ![IMG](./IMG/1.png)
  ![IMG](./IMG/2.png)
