@@ -14,7 +14,7 @@ export const ABOUT_IMG =
   "https://blog.swiggy.com/wp-content/uploads/2024/07/1000075667-1000x486.png";
 
 export const CONTACT_IMG =
-  "https://apptopia.com/blog/wp-content/uploads/2023/09/shutterstock_1291959472-copy-1.png";
+  "https://www.shutterstock.com/image-illustration/contact-us-text-written-over-600nw-1080340454.jpg";
 
 export const MENU_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId=";
 
