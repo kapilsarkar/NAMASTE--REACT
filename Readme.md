@@ -354,13 +354,13 @@ Implementing Redux toolkit for state management.
 
   - 📒 TIME FOR TEST(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-13-TIME%20FOR%20TEST)
 
-- 💻 TIME FOR TEST(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-13-TIME%20FOR%20TEST/Coding.md)
+- 💻 TIME FOR TEST(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-13-TIME%20FOR%20TEST/Code.md)
 
 - 📔 ASSIGNMENT :
 
   - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B13%2B-%2BTime%2Bfor%2Bthe%2Btest.pdf)
 
-  - 🔖 TIME FOR TEST(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-13-TIME%20FOR%20TEST/Coding.md)
+  - 🔖 TIME FOR TEST(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-13-TIME%20FOR%20TEST/Code.md)
 
   - 🔖 LIVE LINK(ASSIGNMENT) ❄️ ➡️[LIVE LINK](https://jade-strudel-a7db95.netlify.app/)
 
