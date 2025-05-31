@@ -337,6 +337,35 @@ Implementing Redux toolkit for state management.
 
 ---
 
+### 📚 EPISODE-13 (TIME FOR TEST) 📗 :
+
+---
+
+Implementing Redux toolkit for state management.
+
+- 🧾 Topics Covered:
+
+  - This section covers various types of testing from a developer's perspective:
+
+      - Manual Testing: Testing features manually by interacting with the application.
+      - Unit Testing: Testing individual units/components in isolation.
+      - Integration Testing: Testing multiple units/components together to ensure they work as a group.
+      - End-to-End (E2E) Testing: Simulating real user scenarios to test the complete flow of the application.
+
+  - 📒 TIME FOR TEST(THEORY) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/EPISODE-13-TIME%20FOR%20TEST)
+
+- 💻 TIME FOR TEST(CODING) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-13-TIME%20FOR%20TEST/Coding.md)
+
+- 📔 ASSIGNMENT :
+
+  - 🔖 ASSIGNMENT QUESTIONS ❓ : 🚼 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/NOTES/ASSIGNMENT%20QUESTIONS/Chapter%2B13%2B-%2BTime%2Bfor%2Bthe%2Btest.pdf)
+
+  - 🔖 TIME FOR TEST(ASSIGNMENT) 📁 ➡️ [LINK](https://github.com/kapilsarkar/NAMASTE--REACT/blob/main/EPISODE-13-TIME%20FOR%20TEST/Coding.md)
+
+  - 🔖 LIVE LINK(ASSIGNMENT) ❄️ ➡️[LIVE LINK](https://jade-strudel-a7db95.netlify.app/)
+
+---
+
 
 
 
