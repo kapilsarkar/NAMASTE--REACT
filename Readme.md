@@ -14,7 +14,8 @@ Namaste React Course from Zero to Hero 🚀 by Akshay Saini(Founder of NamasteDe
   ❄️ ➡️[LIVE LINK](https://foodappkolkata.netlify.app/)
 
   📁 ➡️[FOLDER LINK](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/FOOD-APP)
-
+  
+---
 
  ![IMG](./IMG/1.png)
  ![IMG](./IMG/2.png)
