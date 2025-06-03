@@ -1,12 +1,15 @@
+import Body from "./components/Body";
+import Header from "./components/Header";
 
 function App() {
-  
-
   return (
     <>
-      <h2 className="text-2xl bg-red-500 text-white">YOUTUBE CLONE</h2>
+      <div>
+        <Header/>
+        <Body/>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
