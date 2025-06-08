@@ -9,10 +9,10 @@ const SideBar = () => {
     <div className=" p-5 shadow-lg w-48">
       <ul>
         <li>
-          <i className="fa-solid fa-house"></i> Home
+           Home
         </li>
         <li>
-          <i className="fa-brands fa-youtube"></i> Shorts
+           Shorts
         </li>
         <li>Subscriptions</li>
         <li>Movies</li>
