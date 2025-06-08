@@ -11,12 +11,12 @@ const Header = () => {
       <div className=" flex flex-row md:justify-between sm:justify-center sm:gap-5 lg:gap-6">
         <img
           onClick={() => toggleMenuHandler()}
-          className="h-9 cursor-pointer"
+          className=" h-5 md:h-9 cursor-pointer"
           alt="menu"
           src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-icon-download-in-svg-png-gif-file-formats--crispy-user-interface-pack-icons-462145.png?f=webp&w=256"
         />
         <a href="/"> <img
-          className=" h-9 mx-2"
+          className=" h-5 md:h-9 mx-2"
           alt="youtube-logo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1200px-YouTube_Logo_2017.svg.png"
         /></a>
