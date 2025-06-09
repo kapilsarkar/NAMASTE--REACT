@@ -1,10 +1,33 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import { Provider } from "react-redux";
 import store from "./utils/store.js";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router";
+import Layout from "./components/Layout.jsx";
+import Error from "./components/Error.jsx";
+import Body from "./components/Body.jsx";
+import MainContainer from "./components/MainContainer.jsx";
+import WatchPage from "./components/WathchPage.jsx";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />} errorElement={<Error />}>
+      <Route element={<Body />}>
+        <Route index element={<MainContainer />} />
+        <Route path="main" element={<MainContainer />} />
+        <Route path="watch" element={<WatchPage />} />
+      </Route>
+    </Route>
+  )
+);
+
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <App />
+    <RouterProvider router={router} />
   </Provider>
 );
