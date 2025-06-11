@@ -1,7 +1,31 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
-
+import { useEffect, useState } from "react";
+import { YOUTUBE_SEARCH_API } from "../utils/constant";
 const Header = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    //api call
+
+    //make an api call after every key press
+    //But if the difference b/w two api calls is less than 200ms then decline the api call
+    const timer = setTimeout(() => {
+      getSearchSuggestions();
+    }, 200);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchQuery]);
+
+  const getSearchSuggestions = async () => {
+    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const json = await data.json();
+    console.log(json[1]);
+  };
+
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
@@ -29,6 +53,8 @@ const Header = () => {
           <input
             type="text"
             className="pl-4 w-20 sm:w-72  h-11 outline-black-900 border-black focus:outline-black border-2 rounded-l-full"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
           <button className=" border-2 border-gray-500 py-2 px-5 bg-gray-100 rounded-r-full">
             🔍

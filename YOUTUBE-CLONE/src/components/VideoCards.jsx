@@ -3,7 +3,7 @@ const VideoCards = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
   return (
-    <div className="p-2 m-2 w-52 media338:w-72 shadow-lg">
+    <div className="p-2 m-2 w-52 h-80 media338:w-72 shadow-lg">
       <img
         alt="thumbnail"
         className="w-72 rounded-lg shadow-md  hover:cursor-pointer hover:scale-95"
@@ -24,8 +24,6 @@ const VideoCards = ({ info }) => {
   );
 };
 
-// const fn = (VideoCards) => {
-//   return <VideoCards />;
-// };
+
 
 export default VideoCards;
