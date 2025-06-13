@@ -10,13 +10,13 @@ const VideoCards = ({ info }) => {
         src={thumbnails?.medium?.url}
       />
       <ul className="flex flex-col w-auto gap-1 mt-2">
-        <li className="hover:cursor-pointer hover:scale-105 font-bold ml-2 py-2 media338:w-72 block">
+        <li className="hover:cursor-pointer hover:scale-105 font-bold  py-2 media338:w-72 block">
           {title}
         </li>
-        <li className="hover:cursor-pointer inline-flex ml-2 w-fit">
+        <li className="hover:cursor-pointer inline-flex  w-fit">
           {channelTitle}
         </li>
-        <li className=" font-bold hover:cursor-pointer inline-flex ml-2 w-fit">
+        <li className=" font-bold hover:cursor-pointer inline-flex  w-fit">
           {statistics?.viewCount} views
         </li>
       </ul>

@@ -1,10 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { useEffect, useState } from "react";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
+import { cacheResult } from "../utils/searchSlice";
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const searchCache = useSelector((store) => store.search);
 
   useEffect(() => {
     //api call
@@ -12,7 +16,11 @@ const Header = () => {
     //make an api call after every key press
     //But if the difference b/w two api calls is less than 200ms then decline the api call
     const timer = setTimeout(() => {
-      getSearchSuggestions();
+      if (searchCache[searchQuery]) {
+        setSuggestions(searchCache[searchQuery]);
+      } else {
+        getSearchSuggestions();
+      }
     }, 200);
 
     return () => {
@@ -24,6 +32,14 @@ const Header = () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     console.log(json[1]);
+    setSuggestions(json[1]);
+
+    //Update the cache
+    dispatch(
+      cacheResult({
+        [searchQuery]: json[1],
+      })
+    );
   };
 
   const dispatch = useDispatch();
@@ -36,29 +52,44 @@ const Header = () => {
         <div className=" flex flex-row md:justify-between sm:justify-center sm:gap-5 lg:gap-6">
           <img
             onClick={() => toggleMenuHandler()}
-            className=" h-5 md:h-9 cursor-pointer"
+            className=" h-5 md:h-6 cursor-pointer"
             alt="menu"
             src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-icon-download-in-svg-png-gif-file-formats--crispy-user-interface-pack-icons-462145.png?f=webp&w=256"
           />
           <a href="/">
             {" "}
             <img
-              className=" h-5 md:h-9 mx-2"
+              className=" h-5 md:h-6 mx-2"
               alt="youtube-logo"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1200px-YouTube_Logo_2017.svg.png"
             />
           </a>
         </div>
         <div className=" col-span-10 px-10 ">
-          <input
-            type="text"
-            className="pl-4 w-20 sm:w-72  h-11 outline-black-900 border-black focus:outline-black border-2 rounded-l-full"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button className=" border-2 border-gray-500 py-2 px-5 bg-gray-100 rounded-r-full">
-            🔍
-          </button>
+          <div className=" relative">
+            <input
+              type="text"
+              className="pl-4 w-20 sm:w-72  h-11 outline-black-900 border-black focus:outline-black border-2 rounded-l-full"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setShowSuggestions(true)}
+              onBlur={() => setShowSuggestions(false)}
+            />
+            <button className=" border-2 border-gray-500 py-2 px-5 bg-gray-100 rounded-r-full">
+              🔍
+            </button>
+          </div>
+          {showSuggestions && (
+            <div className=" absolute bg-white py-2 px-5 w-20 sm:w-72 rounded-lg shadow-lg border border-gray-100">
+              <ul>
+                {suggestions.map((s) => (
+                  <li key={s} className="py-2 shadow-sm hover:bg-gray-100">
+                    🔍 {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <div className="col-span-1">
           <img
