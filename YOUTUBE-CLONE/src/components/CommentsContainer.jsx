@@ -1,47 +1,12 @@
+import commentList from "../utils/commentList";
+import CommentList from "./CommentList";
 const CommentsContainer = () => {
-  const commentsData = [
-    {
-      name: "Kapil",
-      text: "Lorem Ipsum Lorem",
-      replies: [
-        {
-          name: "Akshay Sir",
-          text: "JS TEACHER",
-        },
-         {
-          name: "Akshay Sir",
-          text: "JS TEACHER",
-        },
-      ],
-    },
-    {
-      name: "Kapil",
-      text: "Lorem Ipsum Lorem",
-      replies: [],
-    },
-    {
-      name: "Kapil",
-      text: "Lorem Ipsum Lorem",
-      replies: [],
-    },
-    {
-      name: "Kapil",
-      text: "Lorem Ipsum Lorem",
-      replies: [],
-    },
-    {
-      name: "Kapil",
-      text: "Lorem Ipsum Lorem",
-      replies: [],
-    },
-  ];
-  const Comment = ({data})=>{
-     return <div>Comment</div>
-  }
   return (
-    <div className=" m-5 p-2">
+    <div className=" w-full px-3 mt-5">
       <h2 className=" text-2xl font-bold">Comments : </h2>
-      <Comment/>
+      <div className="flex flex-col mt-3">
+        <CommentList comments={commentList} />
+      </div>
     </div>
   );
 };
