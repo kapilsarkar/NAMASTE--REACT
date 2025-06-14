@@ -65,7 +65,7 @@ const Header = () => {
             />
           </a>
         </div>
-        <div className=" col-span-10 px-10 ">
+        <div className=" col-span-10 media510:px-10 ">
           <div className=" relative">
             <input
               type="text"
