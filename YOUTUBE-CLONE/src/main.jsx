@@ -13,6 +13,7 @@ import Error from "./components/Error.jsx";
 import Body from "./components/Body.jsx";
 import MainContainer from "./components/MainContainer.jsx";
 import WatchPage from "./components/WathchPage.jsx";
+import SearchResult from "./components/SearchResult.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
         <Route index element={<MainContainer />} />
         <Route path="main" element={<MainContainer />} />
         <Route path="watch" element={<WatchPage />} />
+        <Route path="/search" element={<SearchResult />} />
       </Route>
     </Route>
   )

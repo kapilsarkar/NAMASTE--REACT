@@ -4,11 +4,21 @@ import { toggleMenu } from "../utils/appSlice";
 import { useEffect, useState } from "react";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
 import { cacheResult } from "../utils/searchSlice";
+import { useNavigate } from "react-router";
+
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchCache = useSelector((store) => store.search);
+
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      navigate("/search?q=" + searchQuery);
+    }
+  };
 
   useEffect(() => {
     //api call
@@ -46,6 +56,7 @@ const Header = () => {
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
+
   return (
     <div className="w-full">
       <div className="bg-white sm:overflow-hidden md:overflow-hidden lg:overflow-hidden flex flex-row justify-between md:p-5 sm:p-0 sm:pt-5 shadow-lg mb-4 shadow-white-500 w-auto flex-wrap">
@@ -74,8 +85,12 @@ const Header = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setShowSuggestions(true)}
               onBlur={() => setShowSuggestions(false)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
-            <button className=" border-2 border-gray-500 py-2 px-5 bg-gray-100 rounded-r-full">
+            <button
+              className=" border-2 border-gray-500 py-2 px-5 bg-gray-100 rounded-r-full"
+              onClick={handleSearch}
+            >
               🔍
             </button>
           </div>
