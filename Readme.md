@@ -12,6 +12,7 @@ Namaste React Course from Zero to Hero 🚀 by Akshay Saini(Founder of NamasteDe
 |-----|----------------|---------------|---------------|
 | 1   | Food App       | [Click Here](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/FOOD-APP) | [Link](https://foodappkolkata.netlify.app/)  |
 | 2   | YouTube Clone  | [Click Here](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/YOUTUBE-CLONE)   | [Link](#)   |
+| 3   | NetFlix GPT  | [Click Here](#)   | [Link](#)   |
 
 ---
 ## 🍉 Food-App :
