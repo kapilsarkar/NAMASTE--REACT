@@ -7,7 +7,7 @@ Namaste React Course from Zero to Hero 🚀 by Akshay Saini(Founder of NamasteDe
 ![IMG](https://img.shields.io/badge/NAMASTE%20REACT%20---%23FF5733)
 
 ---
-## <img height="18px" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"> ReactJS Projects
+## <img height="18px" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"> Projects
 | No. | Project Name   | Folder Link  | Live Link |
 |-----|----------------|---------------|---------------|
 | 1   | Food App       | [Click Here](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/FOOD-APP) | [Link](https://foodappkolkata.netlify.app/)  |
