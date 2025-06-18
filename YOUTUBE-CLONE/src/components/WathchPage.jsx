@@ -18,8 +18,8 @@ const WatchPage = () => {
     <div className=" w-full">
       <div className="w-full flex flex-col">
         <div className="w-full px-5">
-          <div className=" flex flex-wrap p-1 gap-2">
-            <div className=" w-[47rem]">
+          <div className=" flex justify-center flex-wrap p-1 gap-1">
+            <div className=" w-[46rem]">
               <iframe
                 className="rounded-lg w-full aspect-video"
                 src={"https://www.youtube.com/embed/" + searchParams.get("v")}

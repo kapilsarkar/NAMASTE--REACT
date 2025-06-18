@@ -3,7 +3,7 @@ const ChatMessage = ({name,message}) => {
     <div className="p-3 flex items-center">
       <img
         className="h-5 rounded-full"
-        src="https://lh3.googleusercontent.com/a/ACg8ocIypZtj-81l1HB5urLJgkyNV9QyQuNTFA6V_UFxnE6_ijuyblg4=s360-c-no"
+        src="https://cdn3d.iconscout.com/3d/premium/thumb/user-chat-3d-icon-download-in-png-blend-fbx-gltf-file-formats--communication-message-social-media-pack-interface-icons-5656067.png"
       />
       <span className="font-bold px-2">{name}</span>
       <span>{message}</span>
