@@ -10,6 +10,8 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [showUserPopUp, setShowUserPopUp] = useState(false);
+
   const searchCache = useSelector((store) => store.search);
 
   const navigate = useNavigate();
@@ -108,10 +110,44 @@ const Header = () => {
         </div>
         <div className="col-span-1">
           <img
-            className="h-9"
+            className="h-9 cursor-pointer"
             alt="user-icon"
             src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+            onClick={() => setShowUserPopUp(!showUserPopUp)}
           />
+          {showUserPopUp && (
+            <div className="absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-md p-3 z-50">
+              <p className="text-sm text-gray-900">👋 Hello,</p>
+              <p className="text-sm text-gray-900 p-2">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFWNmUleSJpqw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1677594794155?e=2147483647&v=beta&t=-8C9GUhVDeHP2fJ0mKNOZY8q_xWP6a-5Y68OFozJ4I4" className=" w-10 rounded-full"/>
+                LinkedIn:{" "}
+                <a
+                  href="https://www.linkedin.com/in/kapil-sarkar-439754249/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline"
+                >
+                  Click
+                </a>
+              </p>
+              <p className="text-sm text-gray-900 p-2">Github:{" "}
+                <a
+                  href="https://github.com/kapilsarkar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline"
+                >
+                  Click
+                </a></p>
+              <button
+                className="mt-2 text-blue-600 underline text-sm"
+                onClick={() => setShowUserPopUp(false)}
+              >
+                {" "}
+                Close
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
