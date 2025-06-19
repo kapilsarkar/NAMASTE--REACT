@@ -36,7 +36,7 @@ const LiveChat = () => {
         <h2 className=" font-bold text-xl p-2">Live Chat</h2>
       </div>
       <form
-        className="w-full p-2 ml-2 border border-black"
+        className="w-full p-2 media338:ml-2 border border-black"
         onSubmit={(e) => {
           e.preventDefault();
           dispatch(
