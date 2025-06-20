@@ -63,22 +63,23 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full ">
-      <div className="bg-white  sm:overflow-hidden md:overflow-hidden lg:overflow-hidden flex flex-row justify-between md:p-5 sm:p-0 sm:pt-5 shadow-lg mb-4 shadow-white-500 w-auto flex-wrap">
+    <div className="w-full dark:bg-gray-900 text-black dark:text-white">
+      <div className="bg-white  sm:overflow-hidden md:overflow-hidden lg:overflow-hidden flex flex-row justify-between md:p-5 sm:p-0 sm:pt-5 shadow-lg mb-4 shadow-white-500 w-auto flex-wrap dark:bg-gray-900 text-black dark:text-white">
         <div className=" flex flex-row md:justify-between sm:justify-center sm:gap-5 lg:gap-6">
           <img
             onClick={() => toggleMenuHandler()}
-            className=" h-5 md:h-6 cursor-pointer"
+            className=" h-5 md:h-6 cursor-pointer  text-black dark:text-white dark:bg-white"
             alt="menu"
             src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-icon-download-in-svg-png-gif-file-formats--crispy-user-interface-pack-icons-462145.png?f=webp&w=256"
           />
-          <a href="/">
+          <a href="/" className=" flex">
             {" "}
             <img
-              className=" h-5 md:h-6 mx-2"
+              className=" h-5 md:h-7 mt-1 media770:mt-0 mx-1 dark:bg-black"
               alt="youtube-logo"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1200px-YouTube_Logo_2017.svg.png"
+              src="https://pngdownload.io/wp-content/uploads/2023/12/YouTube-Logo-PNG-Symbol-for-Video-Platform-Transparent-jpg.webp"
             />
+            <span className=" font-bold text-xl dark:bg-gray-900 text-black dark:text-white">YouTube</span>
           </a>
         </div>
         <div className=" col-span-10 media510:px-10 ">
@@ -113,9 +114,9 @@ const Header = () => {
         </div>
         <div className="col-span-1">
           <img
-            className="h-9 cursor-pointer"
+            className="h-9 cursor-pointer rounded-full"
             alt="user-icon"
-            src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+            src="https://media.licdn.com/dms/image/v2/D4D03AQFWNmUleSJpqw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1677594794155?e=2147483647&v=beta&t=-8C9GUhVDeHP2fJ0mKNOZY8q_xWP6a-5Y68OFozJ4I4"
             onClick={() => setShowUserPopUp(!showUserPopUp)}
           />
           {showUserPopUp && (
