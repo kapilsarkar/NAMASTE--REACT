@@ -29,7 +29,7 @@ const LiveChat = () => {
 
   return (
     <>
-      <div className="w-full  bg-slate-200 rounded-lg overflow-y-scroll h-[26rem] flex flex-col-reverse shadow-lg">
+      <div className="w-full dark:bg-gray-900 text-black dark:text-white  bg-slate-200 rounded-lg overflow-y-scroll h-[26rem] flex flex-col-reverse shadow-lg">
         {chatMessages.map((c, i) => (
           <ChatMessage key={i} name={c.name} message={c.message} />
         ))}
@@ -49,7 +49,7 @@ const LiveChat = () => {
         }}
       >
         <input
-          className="w-64 p-2 border- border-black"
+          className="w-64 p-2 dark:bg-gray-900 text-black dark:text-white dark:border-white border-border-black"
           type="text"
           value={liveMessage}
           onChange={(e) => setLiveMessage(e.target.value)}

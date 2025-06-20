@@ -2,8 +2,8 @@ const SearchVideoCard = ({ video }) => {
   const { snippet } = video;
   const { title, channelTitle, thumbnails, publishedAt } = snippet;
   return (
-    <div className=" py-3 flex flex-wrap">
-      <div className="  bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-3">
+    <div className=" py-3 flex flex-wrap dark:bg-gray-900 text-black dark:text-white">
+      <div className="  bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-3 dark:bg-gray-900 text-black dark:text-white">
         <img
           src={thumbnails.medium.url}
           alt={title}

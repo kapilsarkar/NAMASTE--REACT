@@ -2,7 +2,7 @@ import Comment from "./Comment";
 
 const CommentList = ({ comments }) => {
   return (
-    <div className=" w-full">
+    <div className=" w-full dark:bg-gray-900 text-black dark:text-white">
       {comments.map((comment, index) => (
         <div key={index}>
           <Comment name={comment.name} text={comment.text} />

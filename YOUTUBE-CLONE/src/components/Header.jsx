@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
 import { cacheResult } from "../utils/searchSlice";
 import { useNavigate } from "react-router";
+import { toggleTheme } from "../utils/themeSlice";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -15,6 +16,8 @@ const Header = () => {
   const searchCache = useSelector((store) => store.search);
 
   const navigate = useNavigate();
+
+  const isDarkMode = useSelector((store) => store.theme.darkMode);
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
@@ -60,8 +63,8 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full">
-      <div className="bg-white sm:overflow-hidden md:overflow-hidden lg:overflow-hidden flex flex-row justify-between md:p-5 sm:p-0 sm:pt-5 shadow-lg mb-4 shadow-white-500 w-auto flex-wrap">
+    <div className="w-full ">
+      <div className="bg-white  sm:overflow-hidden md:overflow-hidden lg:overflow-hidden flex flex-row justify-between md:p-5 sm:p-0 sm:pt-5 shadow-lg mb-4 shadow-white-500 w-auto flex-wrap">
         <div className=" flex flex-row md:justify-between sm:justify-center sm:gap-5 lg:gap-6">
           <img
             onClick={() => toggleMenuHandler()}
@@ -116,10 +119,13 @@ const Header = () => {
             onClick={() => setShowUserPopUp(!showUserPopUp)}
           />
           {showUserPopUp && (
-            <div className="absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-md p-3 z-50">
-              <p className="text-sm text-gray-900">👋 Hello,</p>
+            <div className="absolute bg-white font-bold right-5 mt-2  border border-gray-300 rounded-md shadow-lg p-3 z-50">
+              <p className="text-sm text-gray-900 font-bold text-center">👋 Hi,</p>
               <p className="text-sm text-gray-900 p-2">
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFWNmUleSJpqw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1677594794155?e=2147483647&v=beta&t=-8C9GUhVDeHP2fJ0mKNOZY8q_xWP6a-5Y68OFozJ4I4" className=" w-10 rounded-full"/>
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D4D03AQFWNmUleSJpqw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1677594794155?e=2147483647&v=beta&t=-8C9GUhVDeHP2fJ0mKNOZY8q_xWP6a-5Y68OFozJ4I4"
+                  className=" w-10 rounded-full"
+                />
                 LinkedIn:{" "}
                 <a
                   href="https://www.linkedin.com/in/kapil-sarkar-439754249/"
@@ -130,7 +136,8 @@ const Header = () => {
                   Click
                 </a>
               </p>
-              <p className="text-sm text-gray-900 p-2">Github:{" "}
+              <p className="text-sm text-gray-900 p-2">
+                Github:{" "}
                 <a
                   href="https://github.com/kapilsarkar"
                   target="_blank"
@@ -138,7 +145,15 @@ const Header = () => {
                   className="text-blue-600 underline"
                 >
                   Click
-                </a></p>
+                </a>
+              </p>
+              <button
+                className="mt-2 text-sm px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100"
+                onClick={() => dispatch(toggleTheme())}
+              >
+                Toggle {isDarkMode ? "Light" : "Dark"}Mode
+              </button>
+              <br/>
               <button
                 className="mt-2 text-blue-600 underline text-sm"
                 onClick={() => setShowUserPopUp(false)}

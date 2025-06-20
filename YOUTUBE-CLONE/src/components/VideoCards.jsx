@@ -3,7 +3,7 @@ const VideoCards = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
   return (
-    <div className="p-2 media338:m-2  h-80 media338:w-72 shadow-lg">
+    <div className="p-2 media338:m-2  h-96 media338:w-72 shadow-lg">
       <img
         alt="thumbnail"
         className="w-72 rounded-lg shadow-md  hover:cursor-pointer hover:scale-95"
