@@ -68,14 +68,14 @@ const Header = () => {
         <div className=" flex flex-row md:justify-between sm:justify-center sm:gap-5 lg:gap-6">
           <img
             onClick={() => toggleMenuHandler()}
-            className=" h-5 md:h-6 cursor-pointer  text-black dark:text-white dark:bg-white"
+            className=" h-5 md:h-6 cursor-pointer rounded-full text-black dark:text-white dark:bg-white"
             alt="menu"
             src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-icon-download-in-svg-png-gif-file-formats--crispy-user-interface-pack-icons-462145.png?f=webp&w=256"
           />
           <a href="/" className=" flex">
             {" "}
             <img
-              className=" h-5 md:h-7 mt-1 media770:mt-0 mx-1 dark:bg-black"
+              className=" h-5 md:h-7 mt-1 media770:mt-0 mx-1 rounded-full dark:bg-black"
               alt="youtube-logo"
               src="https://pngdownload.io/wp-content/uploads/2023/12/YouTube-Logo-PNG-Symbol-for-Video-Platform-Transparent-jpg.webp"
             />
