@@ -46,7 +46,7 @@ const Header = () => {
   const getSearchSuggestions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
-    console.log(json[1]);
+    //console.log(json[1]);
     setSuggestions(json[1]);
 
     //Update the cache
@@ -114,7 +114,7 @@ const Header = () => {
         </div>
         <div className="col-span-1">
           <img
-            className="h-9 cursor-pointer rounded-full"
+            className="h-9 cursor-pointer rounded-full animate-pulse"
             alt="user-icon"
             src="https://media.licdn.com/dms/image/v2/D4D03AQFWNmUleSJpqw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1677594794155?e=2147483647&v=beta&t=-8C9GUhVDeHP2fJ0mKNOZY8q_xWP6a-5Y68OFozJ4I4"
             onClick={() => setShowUserPopUp(!showUserPopUp)}
