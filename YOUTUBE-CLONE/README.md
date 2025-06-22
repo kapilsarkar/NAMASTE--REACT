@@ -2,7 +2,7 @@
 
 - This project is a YouTube clone built using React JS, React Router DOM, Redux, and various other libraries. It offers a rich user experience with features like responsive design, live chat, search functionality, sidebar toggling, debouncing for search, memoization/caching for optimizing API calls, and nested comments using recursion of components.
 
-- Live Link : [Link](#)
+- Live Link : [Link](https://youtubeclonekapil.netlify.app/)
 
 - Libraries and Technologies Used :
 
@@ -96,3 +96,9 @@ npm run dev
 ```
 
 6. Open your browser and visit http://localhost:3000 to view the app.
+
+### SCREENSHOT :
+
+![IMG](./IMG/1.png)
+![IMG](./IMG/2.png)
+![IMG](./IMG/3.png)
