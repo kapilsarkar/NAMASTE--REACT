@@ -14,8 +14,6 @@ import Body from "./components/Body.jsx";
 import MainContainer from "./components/MainContainer.jsx";
 import WatchPage from "./components/WathchPage.jsx";
 import SearchResult from "./components/SearchResult.jsx";
-import Demo from "./components/Demo.jsx";
-import Demo2 from "./components/Demo2.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />} errorElement={<Error />}>
