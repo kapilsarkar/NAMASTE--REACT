@@ -12,7 +12,7 @@
 |-----|----------------|---------------|---------------|
 | 1   | Food App       | [Click Here](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/FOOD-APP) | [Link](https://foodappkolkata.netlify.app/)  |
 | 2   | YouTube Clone  | [Click Here](https://github.com/kapilsarkar/NAMASTE--REACT/tree/main/YOUTUBE-CLONE)   | [Link](https://youtubeclonekapil.netlify.app/)   |
-| 3   | NetFlix GPT  | [Click Here](#)   | [Link](#)   |
+| 3   | NetFlix GPT  | [Click Here](https://github.com/kapilsarkar/PROJECT-REPO/tree/main/REACT-JS%20PROJECTS/NETFLIX-GPT)   | [Link](https://kapilmoviebaseproject.netlify.app/)   |
 
 ---
 ## 🍉 Food-App :
